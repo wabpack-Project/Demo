@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<form enctype="multipart/form-data" method="post" action="/work/file_update/">
+  <input type="file" name="file" id="file" onchange="fileChange(this);">
+  <input class="btn btn-default btn-lg btn-block" type="submit" value="上传" id="update_btn">
+  <p>tips:暂时仅支持单次单个上传文件，且文件大小为2M以内，文件格式现仅支持.docx格式。</p>
+</form>
+
+<input type="file" onchange="fileChange(this);" >
+
+<script>
+// 监听文件改变操作
+function fileChange(el) {
+    console.log(el);
+    // 配置文件相关信息
+    var fileSize = 0,         // 设置默认文件大小为0
+        fileName = el.value,  // 文件名称
+        fileEXT = fileName.substring(fileName.lastIndexOf(".")+1).toLowerCase(),  //获得文件后缀名
+        i = 0,  // 循环初始值
+        flag = false, // 标记上传文件类型是否合法，默认不合法
+        fileEXTArr = ["gif", "jpg", "png", "xls", "pdf", "zip", "mht", "tif", "xps", "doc", "txt"];  // 定义文件类型数组
+    console.log(fileName, fileEXT);
+    // 遍历允许上传文件类型，
+    while (fileEXTArr[i]) {
+        // 判断文件类型
+        if (fileEXT == fileEXTArr[i]) {
+            flag = true;
+            break;
+        }
+        i++;
+        console.log(i);
+    }
+    // 判断上传文件类型是否合法
+    if (!flag) {
+        alert("请选择gif,jpg,png,xls,pdf,zip,mht,tif,xps,doc,txt格式文件上传！");
+        el.value="";
+        return;
+    }
+
+    // 获取文件大小
+    if (!el.files) {
+        var filePath = el.value,
+            fileSystem = new ActiveXObject("Scripting.FileSystemObject"),
+            file = fileSystem.GetFile (filePath);
+        fileSize = file.Size;
+    } else {
+        fileSize = el.files[0].size;
+    }
+    // 转换文件大小单位为千字节
+    var fileSizeKB = Math.ceil(fileSize/1024);
+    console.log(fileSizeKB);
+    // 判断文件大小是否为0或大于4M
+    if(fileSizeKB > 4000){
+        alert("文件大小不能大于4M");
+        el.value="";
+        return;
+    } else if (fileSizeKB == 0){
+        alert("文件大小不能为0M");
+        el.value="";
+        return;
+    }
+
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+/* 订单信息 */
+.order_info { background: #fff; padding: .2rem 4%; width: 92%; }
+.of_name { color: #111; font-size: .85rem; line-height: 2.4rem; border-bottom: 1px #eee solid; }
+.of_con { padding: .6rem 0; border-bottom: 1px #eee solid; }
+.of_item { color: #111; font-size: .75rem; line-height: 1.8rem; }
+.of_item span { color: #999; font-size: .75rem; }
+.of_item em { font-size: .6rem; }
+.of_total { color: #111; font-size: .8rem; line-height: 2.4rem; }
+.of_total span { color: #ff6050; font-size: .8rem; }
+.of_total em { font-size: .6rem; }

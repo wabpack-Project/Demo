@@ -1,0 +1,21 @@
+/* 支付方式 */
+.payment { background: #fff; padding: .2rem 4% 0; width: 92%; }
+.pay_tit { color: #111; font-size: .85rem; line-height: 2.4rem; }
+.pay_list { }
+.pay_list li { border-top: 1px #eee solid; }
+.pay_con { line-height: 2.4rem; }
+.pay_name { font-size: .8rem; }
+.pay_con .iconfont { font-size: 1rem; display: inline-block; }
+.pay_con .iconweixin { color: #4ac94e; padding: 0 .8rem 0 .1rem; }
+.pay_con .iconzhifubao { color: #00a9f2; padding-right: .8rem; }
+.pay_con .iconxuanzhong { color: #ddd; padding: 0 .1rem; font-size: 1rem; }
+.pay_con .iconiconfontxuanzhong4 { color: #ff6050; padding: 0 .1rem; font-size: 1rem; }
+.pay_form { display: none; }
+/* 确认支付 */
+.pay_sure { background: #058efe; height: 2.5rem; line-height: 2.5rem; text-align: center; font-size: 1rem; color: #fff; }
+.pay_sure span { padding-left: .3rem; font-size: 1rem; }
+.pay_sure em { font-size: .8rem; }
+
+
+
+

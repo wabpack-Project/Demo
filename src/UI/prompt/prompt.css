@@ -1,0 +1,22 @@
+/* 提示框 */
+.prompt { background: #fff; }
+
+/* 功能 */
+.p_remind { }   /* 提醒 */
+.p_success { }   /* 成功 */
+.p_fail { }   /* 失败 */
+.p_error { }   /* 错误 */
+.p_danger { }   /* 危险 */
+.p_info { }   /* 信息 */
+.p_warning { color: #f00; font-size: .8rem; line-height: 1.5rem; }   /* 警告 */
+.p_warning .iconwarning { color: #f00; font-size: 1rem; display: inline-block; padding-right: .2rem; }
+
+/* 颜色 */
+.p_remind { }
+
+/* 大小尺寸 */
+.p_lg { }   /* 大 */
+.p_sm { }   /* 小 */
+
+/* 是否全屏 */
+.p_block { }    /* 全屏 */

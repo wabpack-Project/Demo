@@ -1,0 +1,22 @@
+/** 重置样式 */
+@import url(module/reset.css);
+
+/** 模块样式 */
+@import url(font/iconfont.css);
+@import url(module/media.css);
+@import url(module/common.css);
+@import url(module/taking_goods.css);
+@import url(module/base_info.css);
+@import url(module/order_info.css);
+@import url(module/Integral_use.css);
+@import url(module/payment.css);
+@import url(module/drawer.css);
+@import url(module/form.css);
+@import url(module/foot.css);
+
+/** 业务样式 */
+@import url(examine.css);
+
+
+.wui_wrapper { background: #f1f5f7;  }
+

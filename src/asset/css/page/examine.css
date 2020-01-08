@@ -1,0 +1,16 @@
+/*body { background: #f1f5f7; }*/
+
+.banner { }
+.banner img { width: 100%; }
+
+.declaration { width: 92%; padding: .5rem 4%; background: #fff; }
+.declaration .tit { font-size: .8rem; line-height: 1.8rem; color: #000; }
+.declaration .des { font-size: 0.65rem; line-height: 1rem; color: #666; }
+
+.column_name { width: 92%; padding: .5rem 4% 0; background: #f1f5f7; line-height: 1.8rem; font-size: .75rem; }
+.related_sign { font-size: .7rem; color: #0688fd; }
+
+.customs_nav { padding-bottom: .5rem; background: #f1f5f8; }
+.m_b { margin-bottom: .5rem; }
+
+

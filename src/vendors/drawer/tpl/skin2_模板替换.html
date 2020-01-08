@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div class="drawer" data-v="<%=data.hash%>">
+  <div class="drawer_mask <%=data.maskClass+'-'+data.hash%>" style="opacity: <%=data.opacity%>; z-index: <%=data.z_index%>;"></div>
+  <div class="drawer_out">
+    <div class="dw_head dw_m92">
+      <div class="fl">
+        <a href="javascript:;" class="cancel <%=data.cancelBtn+'-'+data.hash%>"><%=data.cancelTxt%></a>
+      </div>
+      <div class="fr">
+        <a href="javascript:;" class="confirm <%=data.sureBtn+'-'+data.hash%>"><%=data.sureTxt%></a>
+      </div>
+      <div class="dw_h_name"><%=data.title%></div>
+    </div>
+    <div class="dw_body dw_m92" style="height: <%=data.height%>;">
+      <ul class="select_list">
+        <%
+        var i = 0, len = data.data.length;
+        if(len == 0) {
+        %>
+        <li class="">
+          <div class="no_data"><%=data.noData%></div>
+        </li>
+        <% } else {
+        for(; i < len; i++){
+        var detail = data.data[i];
+        %>
+        <li>
+          <div class="fl "><span class="iconfont iconxuanzhong s_select"></span></div>
+          <div class="fr s_price"><em>￥</em><%=detail.price||""%></div>
+          <div class="s_list_tit">
+            <div>
+              <%=detail.name||""%>
+            </div>
+          </div>
+        </li>
+        <% } } %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

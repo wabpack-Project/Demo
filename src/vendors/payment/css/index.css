@@ -1,0 +1,10 @@
+/** 重置样式 */
+@import url(../../../asset/css/module/reset.css);
+
+/** 模块样式 */
+@import url(../../../asset/css/font/iconfont.css);
+@import url(../../../asset/css/module/media.css);
+@import url(../../../asset/css/module/common.css);
+/** 组件样式 */
+@import url(../../drawer/css/drawer_m.css);
+@import url(payment.css);

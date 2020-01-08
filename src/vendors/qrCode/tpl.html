@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+  <title>海关</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link href="css/index.css" rel="stylesheet" >
+</head>
+<body>
+
+<!-- 二维码 -->
+<div class="popup">
+  <div class="popup_mask"></div>
+  <div class="popup_out">
+    <div class="pop_head">
+      <div class="qc_price">支付金额：<span><em>￥</em><%=data.total_fee||''%></span></div>
+    </div>
+    <div class="pop_body">
+      <div class="qrCode">
+        <div class="qc_img">
+          <div class="qc_id_img">
+            <img src="<%=data.code_url||''%>">
+          </div>
+          <div class="qc_id_invalid">
+            <div class="qc_void">
+              <i class="iconfont iconshuaxin"></i>
+              <p class="qc_txt">二维码失效，点击刷新</p>
+            </div>
+            <div class="qc_mask"></div>
+          </div>
+        </div>
+        <div class="qc_time">该二维码 <span><%=data.timeout_express||''%>分钟</span>后过期</div>
+        <div class="qc_des">请用<%=data.payName||''%>扫描</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

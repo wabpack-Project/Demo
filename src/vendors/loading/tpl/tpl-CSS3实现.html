@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+  <title>海关</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <style>
+    .loading {
+      position: relative;
+      width: 50px;
+      height: 50px;
+    }
+    .point_circle {
+      width: 4px;
+      height: 4px;
+      border-radius: 2px;
+      background: #68b2ce;
+      position: absolute;
+      animation: spinner linear 0.8s infinite;
+      -webkit-animation: spinner linear 0.8s infinite;
+    }
+    .point_circle:nth-child(1){
+      left: 24px;
+      top: 2px;
+      animation-delay:0s;
+    }
+    .point_circle:nth-child(2){
+      left: 40px;
+      top: 8px;
+      animation-delay:0.1s;
+    }
+    .point_circle:nth-child(3){
+      left: 47px;
+      top: 24px;
+      animation-delay:0.1s;
+    }
+    .point_circle:nth-child(4){
+      left: 40px;
+      top: 40px;
+      animation-delay:0.2s;
+    }
+    .point_circle:nth-child(5){
+      left: 24px;
+      top: 47px;
+      animation-delay:0.4s;
+    }
+    .point_circle:nth-child(6){
+      left: 8px;
+      top: 40px;
+      animation-delay:0.5s;
+    }
+    .point_circle:nth-child(7){
+      left: 2px;
+      top: 24px;
+      animation-delay:0.6s;
+    }
+    .point_circle:nth-child(8){
+      left: 8px;
+      top: 8px;
+      animation-delay:0.7s;
+    }
+    @keyframes spinner
+    {
+      0%,40%,100% {transform: scale(1);}
+      20% {transform: scale(3);}
+    }
+    @-webkit-keyframes spinner
+    {
+      0%,40%,100% {transform: scale(1);}
+      20% {transform: scale(3);}
+    }
+  </style>
+  
+  <link href="../css/loading.css" rel="stylesheet" >
+  
+</head>
+<body>
+<div id="loading"  >
+  <div class="loading">
+    <div class="point_circle"></div>
+    <div class="point_circle"></div>
+    <div class="point_circle"></div>
+    <div class="point_circle"></div>
+    <div class="point_circle"></div>
+    <div class="point_circle"></div>
+    <div class="point_circle"></div>
+    <div class="point_circle"></div>
+  </div>
+  <div class="load_text">加载中</div>
+</div>
+
+<div class="loading" >
+  <div class="loading_main">
+    <div class="spinner">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <div class="load_text">正在努力加载中...</div>
+  </div>
+  <div class="loading_mask"></div>
+</div>
+
+</body>
+</html>

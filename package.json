@@ -1,0 +1,51 @@
+{
+  "name": "webpackconfig_001",
+  "version": "1.0.0",
+  "description": "webpack --config config/webpack.config.js",
+  "main": "index.js",
+  "scripts": {
+    "start-test": "webpack --config build/webpack.config.js",
+    "start-dev": "webpack-dev-server --config build/webpack.config.dev.js",
+    "build": "webpack --config build/webpack.config.build.js",
+    "open-build": "node build/build.js",
+    "start-build": "npm run build && node build/build.js",
+    "start-test-mod": "webpack --config configMod/webpack.config.mod.js",
+    "start-dev-mod": "webpack-dev-server --config configMod/webpack.config.mod.dev.js",
+    "build-mod": "webpack --config configMod/webpack.config.mod.build.js",
+    "open-build-mod": "node build/build.js",
+    "start-build-mod": "npm run build-mod && node buildMod/build.js",
+    "dev-init": "node mod_build/dev.js",
+    "dev-run": "webpack-dev-server --config mod_build/webpack.config.dev.js",
+    "build-init": "node mod_build/build.js",
+    "build-run": "webpack --config mod_build/webpack.config.build.js",
+    "open-mod-build": "node mod_build/mod_build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "add-asset-html-cdn-webpack-plugin": "^1.0.0",
+    "address": "^1.1.2",
+    "camelcase": "^5.3.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "expose-loader": "^0.7.5",
+    "express": "^4.16.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "html-withimg-loader": "^0.1.16",
+    "json-loader": "^0.5.7",
+    "opn": "^6.0.0",
+    "style-loader": "^0.19.0",
+    "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.11.5"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.13"
+  }
+}

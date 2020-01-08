@@ -1,0 +1,75 @@
+.drug { position:fixed; top: 0; bottom: 0; left: 0; right: 0; height: 100%; z-index: 20; background: #fff; }
+.d_m90 { padding: 0 5%; width: 90%; }
+.d_m92 { padding: 0 4%; width: 92%; }
+.d_m94 { padding: 0 3%; width: 94%; }
+/* 搜索 */
+.drug_search { height: 1.8rem; padding-top: .2rem; border-bottom: 1px #eee solid; /*position: absolute; top: 0; left: 0; width: 100%;*/ }
+.search_input { position: relative; border: 1px #eee solid; border-radius: .3rem; }
+.search_input input[type="search"] { display: block; width: 100%;  padding: .1rem 1.5rem .1rem .3rem; line-height: 1.2rem; border: none; }
+.search_input input:focus { outline: none }
+.search_input .iconfont { position: absolute; right: .3rem; top: .2rem; width: 1rem; color: #00a7ff;  }
+/* 布局 */
+.drug_container { height: 100%; }
+.drug_m { position: absolute; top: 2rem; bottom: 2rem; left: 0; width: 100%; }
+.drug_l { height: 100%; width: 5.25rem; overflow-y: scroll; background: #f1f5f7; }
+.drug_r { height: 100%; padding-left: 5.25rem; }
+/* 类别 */
+.d_category { }
+.d_category li { padding: .5rem 0 .5rem .7rem; line-height: 2rem; font-size: .8rem; color: #333; }
+.d_category li:first-child { border-top:none; }
+.d_category li.cur { background: #fff; color: #000; font-weight: bolder; }
+/* 药品列表 */
+.d_list { max-height: 100%; overflow-y: scroll; padding-top: .5rem; }
+.d_list li { border-bottom: 1px #eee solid; padding: .8rem 0; }
+/*.d_list li:first-child { border-top:none; }*/
+.d_detail { }
+.d_img { width: 5rem; height: 3.35rem; overflow: hidden; }
+.d_img img { width: 100%; }
+.d_des { padding-left: 5.5rem; }
+.d_price { color: #ff6050; font-size: .5rem; line-height: 1rem; }
+.d_price em { font-size: .75rem; }
+.d_tit { color: #000; font-size: .65rem; line-height: 1rem; height: 2rem; overflow: hidden; margin-bottom: .2rem; }
+/* 数量样式 */
+.drug_m .input_opt { }
+/* 列表名称 */
+.d_name { font-size: .75rem; line-height: 1.8rem; color: #000; /*border-bottom: 1px #eee solid;*/ padding-top: .5rem; }
+/* 底部 */
+.drug_foot { background: #fff; height: 2.2rem; position: absolute; bottom: 0; left: 0; width: 100%; z-index: 101;  -webkit-box-shadow:0 -1px 2px -1px #378fe333;box-shadow:0 -1px 2px -1px #378fe333; }
+.f_sure { background: #00a7ff; height: 100%; width: 5rem; line-height: 2.2rem; text-align: center; font-size: .8rem; color: #fff; }
+.f_total { line-height: 2.2rem; padding-left: 1rem; }
+.f_cart { padding:.3rem .8rem 0 0; position: relative; }
+.f_cart .iconfont { font-size: 1rem; }
+.f_cart .count { position: absolute; top: .1rem; right: .4rem; font-size: .6rem; line-height: .9rem; background: #ff6050; border-radius: 50%; min-width: .9rem; color: #fff; text-align: center; }
+.f_price { color: #ff6050; font-size: .8rem; }
+.f_price em { font-size: .65rem; }
+.drug_box { width: 1.75rem; }
+
+/* 自选记录 */
+.card_record { position: absolute; bottom: 0; left: 0; width: 100%; z-index: 30; background: #fff; }
+.c_record_head { padding: 0 .5rem; height: 2.5rem; line-height: 2.5rem; background: #f1f5f7; }
+.c_record_body { background: #fff; max-height: 18rem; overflow-y: scroll; }
+.clear_record { font-size: .7rem; color: #666; }
+.clear_record .icondelete { color: #a3a3a4; margin-right: .2rem; }
+.c_fare { font-size: .7rem; }
+
+/* 自选记录列表 */
+.r_list { box-shadow: inset 0px -3px 6px -3px #378fe375; }
+.r_list li { border-top: 1px #efefef solid; padding: .3rem 0; }
+.r_list li:first-child { border-top:none; }
+.r_name { color: #111; font-size: .65rem; line-height: 2rem; height: 2rem; overflow: hidden;text-overflow:ellipsis; white-space: nowrap; }
+.r_price { color: #ff6050; font-size: .7rem; line-height: 2rem; padding: 0 .5rem 0 .2rem; }
+.r_quantity { padding: .5rem 0 0 0; }
+.r_quantity .sk1 .count_opt.cut { display: block; }
+/* 阴影 */
+.r_box_shadow { box-shadow: inset 0px -1px 2px -1px #378fe333; }
+/* 主题1 */
+.drug.skin1 { }
+.drug.skin1 .drug_search { display: none; }
+.drug.skin1 .drug_m { top: 0; }
+
+
+
+
+
+
+

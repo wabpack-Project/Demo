@@ -1,0 +1,12 @@
+.g_m92 { padding: 0 4%; width: 92%; }
+/* 指引单 */
+.guide_sheet { background: #fff; padding: .4rem 4%; width: 92%; line-height: 1.2rem; }
+.guide_sheet img { height: 1rem; vertical-align: top; margin-right: .5rem; }
+.guide_sheet img.mid { margin-top: .1rem; }
+.guide_sheet span { display: block; font-size: .75rem; height: 1.2rem; line-height: 1.2rem; overflow: hidden;text-overflow: ellipsis; white-space: nowrap; }
+.guide_sheet a { display: inline-block; height: 1.2rem; line-height: 1.2rem; color: #666; font-size: .7rem; }
+.guide_sheet .iconyoujiantou { display: inline-block; padding-left: .15rem; }
+
+
+
+

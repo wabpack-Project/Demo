@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Title</title>
+  <!-- jq -->
+  <script src="../jquery/jquery-1.10.2.min.js"></script>
+  <!-- 通用配置 -->
+  <link rel="stylesheet" href="../../../css/customs/module/reset.css">
+  <link rel="stylesheet" href="../../../css/customs/module/common.css">
+  <link rel="stylesheet" href="../../../css/customs/module/media.css">
+  <link rel="stylesheet" href="../../../css/customs/font/iconfont.css">
+  <!-- 模块样式 -->
+  <link rel="stylesheet" href="quantityOpt.css">
+  <!-- 变更样式 -->
+  <style>
+    .quantity { }
+    .quantity { }
+  </style>
+</head>
+<body>
+
+<div class="quantity clearfix" id="quantity" >
+  <div class="count_opt fl cut">
+    <span class="iconfont iconjianshao_f"></span>
+  </div>
+  <div class="input_opt fl">
+    <input class="text_change" type="text" value="3小时" >
+  </div>
+  <div class="count_opt fl add">
+    <span class="iconfont iconjia"></span>
+  </div>
+</div>
+
+<div class="quantity clearfix" >
+  <div class="count_opt fl cut">
+    <span class="iconfont iconjianshao_f"></span>
+  </div>
+  <div class="input_opt fl">
+    <input class="text_change" disabled type="text" value="3小时" >
+  </div>
+  <div class="count_opt fl add">
+    <span class="iconfont iconjia"></span>
+  </div>
+</div>
+
+<div class="quantityT">1</div>
+<div class="quantityT">2</div>
+<div class="quantityT">3</div>
+<div class="quantityT">4</div>
+
+<script src="quantityOpt.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>

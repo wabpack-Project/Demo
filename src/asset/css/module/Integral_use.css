@@ -1,0 +1,16 @@
+/* 积分使用 */
+.integral_use { background: #fff; padding: .2rem 4%; width: 92%; }
+/* 积分额度 */
+.ig_balance { line-height: 1.8rem; padding: .6rem 0; border-bottom: 1px #eee solid; }
+.ig_name {  font-size: .8rem; color: #666; }
+.ig_name .iconfont { font-size: 1.8rem; color: #f64e4e; }
+.ig_val { margin-right: .8rem; font-size: .85rem; color: #f64e4e; font-weight: bolder; }
+.ig_recharge { background: #ff6a6a; border-radius: .3rem; padding: 0 .8rem; font-size: .85rem; color: #fff; }
+
+/* 积分操作 */
+.ig_opt { padding: .6rem 0; }
+.ig_des { line-height: 1.8rem; color: #666; font-size: .7rem; }
+.ig_user { background: #3cade7; border-radius: .3rem; padding: 0 .8rem; font-size: .85rem; color: #fff; line-height: 1.8rem; }
+.ig_count { margin: .15rem .6rem 0 0; border: 1px #ddd solid; border-radius: .2rem; height: 1.4rem; line-height: 1.4rem; }
+.ig_count input[type="text"] { width: 1.6rem; border: 1px #ddd solid; border-style: none solid; height: 1.2rem; line-height: 1.2rem; padding: .1rem .1rem; text-align: center; background: #fafafa; }
+.ig_count .iconfont { font-size: .6rem; padding: 0 .35rem; }

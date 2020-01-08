@@ -1,0 +1,128 @@
+{
+  "res": 1,
+  "data": {},
+  "department_arr": {
+    "1": "\u836f\u5e93"
+  },
+  "supplier_arr": {
+    "1": {
+      "id": "1",
+      "name": "\u56fd\u836f",
+      "py_code": "GY"
+    },
+    "2": {
+      "id": "2",
+      "name": "\u534e\u6da6",
+      "py_code": "HR"
+    },
+    "3": {
+      "id": "3",
+      "name": "\u56fd\u836f\u5728\u7ebf",
+      "py_code": "GYZX"
+    },
+    "4": {
+      "id": "4",
+      "name": "\u4e5d\u5dde\u901a",
+      "py_code": "JZT"
+    },
+    "5": {
+      "id": "5",
+      "name": "\u4e2d\u65b0",
+      "py_code": "ZX"
+    },
+    "6": {
+      "id": "6",
+      "name": "\u610f\u5fb7\u80dc",
+      "py_code": "YDS"
+    },
+    "7": {
+      "id": "7",
+      "name": "\u6fb3\u6d32\u67ef\u84dd\uff08\u9999\u5a1c\u9732\u513f\u3001\u5965\u65af\u5361\u725b\uff09",
+      "py_code": "AZKLXNLEASKN"
+    },
+    "8": {
+      "id": "8",
+      "name": "\u5e7f\u5dde\u946b\u5c3c\u7f51\u7edc\u79d1\u6280\u6709\u9650\u516c\u53f8",
+      "py_code": "GZNWLKJYXGS"
+    },
+    "9": {
+      "id": "9",
+      "name": "\u53cc\u884c\u7ebf",
+      "py_code": "SXX"
+    },
+    "10": {
+      "id": "10",
+      "name": "\u6fb3\u7ebd\u54a8\u8be2",
+      "py_code": "ANZX"
+    },
+    "11": {
+      "id": "11",
+      "name": "\u6c88\u9633\u5e02\u6c88\u6cb3\u533a\u6600\u5ddd\u65e5\u7528\u54c1\u54a8\u8be2\u90e8",
+      "py_code": "SYSSHQCRYPZXB"
+    },
+    "12": {
+      "id": "12",
+      "name": "\u6c88\u9633\u9f99\u827a\u6e90\u5546\u8d38\u6709\u9650\u516c\u53f8",
+      "py_code": "SYLYYSMYXGS"
+    },
+    "13": {
+      "id": "13",
+      "name": "\u5e7f\u4e1c\u58f9\u53f7\u5927\u836f\u623f\u8fde\u9501\u6709\u9650\u516c\u53f8",
+      "py_code": "GDYHDYFLSYXGS"
+    },
+    "14": {
+      "id": "14",
+      "name": "\u4e5d\u5dde\u901a",
+      "py_code": "JZT"
+    },
+    "15": {
+      "id": "15",
+      "name": "\u4e94\u5bb6\u6e20\u533b\u836f",
+      "py_code": "WJQYY"
+    },
+    "16": {
+      "id": "16",
+      "name": "\u5f90\u5dde\u6da6\u4ed5\u7279\u5546\u8d38\u6709\u9650\u516c\u53f8",
+      "py_code": "XZRSTSMYXGS"
+    },
+    "17": {
+      "id": "17",
+      "name": "\u5fb7\u6cf0",
+      "py_code": "DT"
+    },
+    "18": {
+      "id": "18",
+      "name": "\u4fdd\u5143\u5802",
+      "py_code": "BYT"
+    },
+    "19": {
+      "id": "19",
+      "name": "\u8fbd\u5b81\u7701\u533b\u836f\u5bf9\u5916\u8d38\u6613\u6709\u9650\u516c\u53f8",
+      "py_code": "LNSYYDWMYYXGS"
+    },
+    "20": {
+      "id": "20",
+      "name": "\u5927\u8fde\u4e1c\u5317\u4e9a\u6709\u9650\u516c\u53f8",
+      "py_code": "DLDBYYXGS"
+    },
+    "21": {
+      "id": "21",
+      "name": "\u5176\u4ed6",
+      "py_code": "QT"
+    },
+    "24": {
+      "id": "24",
+      "name": "\u56fd\u52a1\u9662",
+      "py_code": "GWY"
+    }
+  },
+  "is_verify_arr": {
+    "1": "\u767b\u8bb0",
+    "2": "\u51fa\u5e93"
+  },
+  "type_arr": {
+    "3": "\u8017\u635f\u51fa\u5e93",
+    "7": "\u5176\u4ed6\u51fa\u5e93",
+    "8": "\u9000\u8d27\u51fa\u5e93"
+  }
+}

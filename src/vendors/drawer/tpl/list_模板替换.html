@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<ul class="select_list">
+  <%
+  var i = 0, len = data.data.length;
+  if(len == 0) {
+  %>
+  <li class="">
+    <div class="no_data"><%=data.noData%></div>
+  </li>
+  <% } else {
+  for(; i < len; i++){
+  var detail = data.data[i];
+  %>
+  <li>
+    <div class="fl "><span class="iconfont iconxuanzhong s_select"></span></div>
+    <div class="fr s_price"><em>￥</em><%=detail.price||""%></div>
+    <div class="s_list_tit">
+      <div>
+        <%=detail.name||""%>
+      </div>
+    </div>
+  </li>
+  <% } } %>
+</ul>
+
+<li>
+  <div class="fl "><span class="iconfont iconxuanzhong s_select"></span></div>
+  <div class="fr s_price"><em>￥</em>1185</div>
+  <div class="s_list_tit">
+    <div>其他出境船员常规体检</div>
+  </div>
+</li>
+
+<li>
+  <div class="fl "><span class="iconfont iconxuanzhong s_select"></span></div>
+  <div class="fr s_price"><em>￥</em>data[i].price||""</div>
+  <div class="s_list_tit">
+    <div>data[i].name||""</div>
+  </div>
+</li>
+
+</body>
+</html>

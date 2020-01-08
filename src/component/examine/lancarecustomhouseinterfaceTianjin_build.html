@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 设置网页meta（默认设置不需要修改，页面需要引用） -->
+  <?php $this->load_template('mobile_iphone/set_meta.php'); ?>
+  <!-- icon引用和公共js、css库引用（可以不引用，根据页面情况引用自己的js和css） -->
+  <?php $this->load_template('mobile_iphone/set_link.php'); ?>
+  <!-- 判断访问设备（可以不引用，根据页面是否用到设备参数配置） -->
+  <?php $this->load_template('mobile_iphone/set_device.php'); ?>
+  <!-- 设置网站统计和主域名（根据需要引用） -->
+  <?php $this->load_template('mobile_iphone/set_config.php'); ?>
+  
+</head>
+<body>
+<!-- 网页HEADER -->
+<?php $this->load_template('mobile_iphone/set_top.php'); ?>
+<!-- 网页主体代码 -->
+<div class="wui_wrapper">
+
+</div>
+
+<!-- 操作按钮 -->
+<div class="footer" style="display: none" >
+  <div class="foot_opt skin1 fr">
+    <input id="appointment" type="button" value="立即预约" >
+  </div>
+  <div class="foot_info"> <span>合计:</span><em>￥</em>0.00</div>
+</div>
+<!-- end -->
+<!--<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>-->
+<script>
+	siteUrl = "<?=$C->SITE_URL ?>";
+	userId = "<?=$D->lancare_customhouse_interface_Tianjin_login_user_id ?>";
+	// siteUrl = "http://m.lk.cn/";
+	// userId = "85";
+	// userId = "86";
+	// userId = "213770";
+</script>
+
+
+</body>
+</html>

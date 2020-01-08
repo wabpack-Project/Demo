@@ -1,0 +1,18 @@
+.demo { }
+/* section */
+.d_section { }
+/* 标题 */
+.d_title { margin: 0; padding: 20px 16px 16px; color: #333; font-weight: normal; font-size: 18px; line-height: 16px; }
+/* 按钮 */
+.btn { position: relative; display: inline-block; box-sizing: border-box; height: 44px; margin: 0; padding: 0; font-size: 16px; line-height: 42px; text-align: center; border-radius: 2px; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; -webkit-appearance: none; -webkit-text-size-adjust: 100%; }
+.btn_info { color: #fff; background-color: #1989fa; border: 1px solid #1989fa; }
+.btn_danger { color: #fff; background-color: #ee0a24; border: 1px solid #ee0a24; }
+.btn_primary { color: #fff; background-color: #07c160; border: 1px solid #07c160; }
+.btn_normal { padding: 0 15px; font-size: 14px; }
+/*  */
+.d_section .btn { margin-left: 16px; }
+
+
+
+
+

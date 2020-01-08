@@ -1,0 +1,106 @@
+.loading { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%;
+    display: flex; justify-content: center; /* 水平居中 */ align-items: center;   /* 垂直居中 */ }
+/*.loading-wrapper {*/
+    /*margin-bottom: 150px;*/
+    /*padding: 20px;*/
+    /*border-radius: 8px;*/
+    /*background-color: rgba(0,0,0,0.7);*/
+    /*text-align: center;*/
+/*}*/
+.loading { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 10; width: 100%; height: 100%; }
+.loading-mask {  position: absolute; z-index: 5; top: 0; right: 0; bottom: 0; left: 0; }
+.loading-wrapper { position: absolute; top: 40%; left: 50%; z-index: 10; padding: 20px; border-radius: 8px; text-align: center; -webkit-transform: translate(-50%,-50%); transform: translate(-50%,-50%); background-color: rgba(0, 0, 0, 0.7); }
+.load-text { line-height: 36px; font-size: 18px; padding-top: 10px; color: #fff; }
+.loading-spinner {
+    position: relative;
+    margin: 0 auto;
+    width: 57px;
+    height: 57px;
+}
+.spinner { }
+.spin {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px;
+    position: absolute;
+    animation: spinner-fade linear 0.8s infinite;
+    -webkit-animation: spinner-fade linear 0.8s infinite;
+}
+.spin:nth-child(1){
+    left: 24px;
+    top: 2px;
+    -webkit-animation-delay: .125s;
+    animation-delay: .125s;
+}
+.spin:nth-child(2){
+    left: 40px;
+    top: 8px;
+    -webkit-animation-delay: .25s;
+    animation-delay: .25s;
+}
+.spin:nth-child(3){
+    left: 47px;
+    top: 24px;
+    -webkit-animation-delay: .375s;
+    animation-delay: .375s;
+}
+.spin:nth-child(4){
+    left: 40px;
+    top: 40px;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+.spin:nth-child(5){
+    left: 24px;
+    top: 47px;
+    -webkit-animation-delay: .625s;
+    animation-delay: .625s;
+}
+.spin:nth-child(6){
+    left: 8px;
+    top: 40px;
+    -webkit-animation-delay: .75s;
+    animation-delay: .75s;
+}
+.spin:nth-child(7){
+    left: 2px;
+    top: 24px;
+    -webkit-animation-delay: .875s;
+    animation-delay: .875s;
+}
+.spin:nth-child(8){
+    left: 8px;
+    top: 8px;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes spinner-fade {
+    0% {
+        opacity: .85
+    }
+
+    50% {
+        opacity: .25
+    }
+
+    to {
+        opacity: .25
+    }
+}
+
+@keyframes spinner-fade {
+    0% {
+        opacity: .85
+    }
+
+    50% {
+        opacity: .25
+    }
+
+    to {
+        opacity: .25
+    }
+}

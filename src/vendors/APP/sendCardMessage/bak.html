@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+	/*
+	   * processing_status 处理状态 0待处理 1已处理
+	   * register_date     时间
+	   * apply_id          挂号的id
+	   * card_type         1 预约挂号原生 2 预约挂号网页 3 转诊 4 检查 5 支付
+	   * card_url          点击链接
+	   * doctor_id         只用于原生挂号
+	   */
+	
+	if (data.res == 1) { // 成功
+		var extend = {
+			"card_url": "<?= $C->SITE_URL ?>settings/transferclient/tab:list",  // 卡片地址
+			"card_type": "3", // 卡片类型
+			"register_date": "<?= date("Y-m-d", time()) ?>",  // 发卡片时间
+			"processing_status": processing_status,   // 会员0医生1
+			"data_id": data.apply_id  // 订单id
+		};
+
+	<?php if ($this->user->info->rank == 'member') { ?>
+				// 会员给医生发
+			var toUserId = $('#hidden_doctor_id').val();
+			var toUserName = $("#transfer_doctor").val();
+		<?php  }?>
+	<?php if ($this->user->info->rank == 'doctor') { ?>
+				// 医生给会员发
+			var toUserId = $("#hidden_doc_member").val();
+			var toUserName = $("#transfer_patient").val();
+		<?php  }?>
+		if (is_android == true) {
+			window.LanCareWeb.sendCardMessage('您有一个转诊申请，请尽快处理', toUserId, toUserName, JSON.stringify(extend));
+		} else if (ios_app) {
+			window.webkit.messageHandlers.Lancare.postMessage({
+				classname: 'sendCardMessage',
+				content: "您有一个转诊申请，请尽快处理",
+				toUserId: toUserId,
+				toUserName: toUserName,
+				extend: JSON.stringify(extend)
+			});
+		}
+//李东生
+		$.get('<?= $C->SITE_URL ?>2/lcim_uploadfile?contenttype=101&from_client_id=<?=$this->user->id?>&to_client_id=' + toUserId + '&status=' + processing_status + '&gettype=1&data_id=' + data.apply_id);
+</script>
+
+
+</body>
+</html>

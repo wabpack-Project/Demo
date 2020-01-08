@@ -1,0 +1,24 @@
+.footer { position:fixed; z-index:10; left: 0; bottom: 0; width: 100%; -webkit-box-shadow:0 -1px 2px -1px #378fe333;box-shadow:0 -1px 5px -1px #378fe333; font-size:0.9rem; height:2.5rem; background: #fff; }
+/** 按钮 skin1 */
+.foot_opt { }
+.foot_opt.skin1 input[type="button"] { border: none; background: #0688fd; line-height: 2.5rem; color: #fff; padding: 0 1.35rem; }
+/** 信息 */
+.foot_info { color: #ff6050;  font-size: .9rem; line-height: 2.5rem; padding-left: 4%; }
+.foot_info em { font-size: .7rem; }
+.foot_info span { font-size: .7rem; color: #333; }
+
+/** 按钮 skin2 */
+.foot_opt { }
+.foot_opt input[type="button"] { border: none; background: #0688fd; line-height: 2.5rem; color: #fff; padding: 0 1.35rem; }
+
+
+
+
+
+
+
+
+
+
+
+

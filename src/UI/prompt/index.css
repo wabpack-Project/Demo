@@ -1,0 +1,11 @@
+/** 重置样式 */
+@import "../../asset/css/module/reset.css";
+
+/** 字号 */
+@import "../../asset/css/module/media.css";
+
+/** 字体 */
+@import "../../asset/font/prompt/iconfont.css";
+
+/** 业务 */
+@import "prompt.css";

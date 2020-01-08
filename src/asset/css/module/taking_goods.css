@@ -1,0 +1,24 @@
+/* 取货方式 */
+.taking_goods { background: #fff; padding: .2rem 4%; width: 92%; }
+.tg_way { border-bottom: 1px #eee solid; }
+.tg_des { font-size: .8rem; line-height: 2.3rem; color: #111; }
+.tg_list { }
+.tg_list li { float: left; width: 4rem; }
+.tg_list .iconfont { line-height: 2rem; padding:0 .5rem; }
+.tg_list .iconxuanzhong { color: #ddd; font-size: 1rem; }
+.tg_list .iconiconfontxuanzhong4 { color: #ff6050; font-size: 1.1rem; }
+.tg_tit { font-size: .8rem; line-height: 2rem; }
+.tg_addr { }
+
+/* 地址 */
+.addr_list { }
+.addr_list li { border-bottom: 1px #eee solid; }
+.addr_info { padding: .5rem 0; }
+.addr_info .iconfont  { display: inline-block; line-height: 2.4rem; }
+.addr_con { line-height: 1.2rem; font-size: .7rem; color: #666; min-height: 2.4rem; }
+.addr_con p { }
+.addr_con span { padding-left: .8rem; }
+
+
+
+

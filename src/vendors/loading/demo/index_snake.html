@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+  <title>海关</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  
+  <link href="../css/snake.css" rel="stylesheet" >
+  <style>
+    * { margin: 0; padding: 0; }
+    .button { color: #fff; background-color: #1989fa; border: 1px solid #1989fa; padding: 0 10px; }
+    .button-spinner { display: inline-block; height: 24px; line-height: 24px; }
+    .button-spinner .spinner-snake { margin: 0 auto; height: 20px; width: 20px; border-width: 2px; }
+    .button-text { display: inline-block; line-height: 24px; vertical-align: top; margin-left: 5px; }
+  </style>
+
+</head>
+<body>
+<!-- 弹出加载中 -->
+<div class="loading"  >
+  <div class="loading-wrapper loading-vertical">
+    <div class="loading-spinner">
+      <div class="spinner-snake" ></div>
+    </div>
+    <div class="load-text">正在努力加载中...</div>
+  </div>
+  <div class="loading-mask"></div>
+</div>
+<!-- 按钮加载中 -->
+<button class="button" >
+  <div class="button-spinner">
+    <div class="spinner-snake" ></div>
+  </div>
+  <div class="button-text">加载中...</div>
+</button>
+<!-- end -->
+
+
+
+<script src="../../mini-tpl/mini-tpl.min.js" ></script>
+<script src="../js/loading.js" ></script>
+<!--<script src="js/index.js" ></script>-->
+
+</body>
+</html>

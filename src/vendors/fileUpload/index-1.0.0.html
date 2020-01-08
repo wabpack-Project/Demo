@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+
+<form enctype="multipart/form-data" method="post" action="/work/file_update/">
+  <input type="file" name="file" id="file" onchange="fileChange(this);">
+  <input class="btn btn-default btn-lg btn-block" type="submit" value="上传" id="update_btn">
+  <p>tips:暂时仅支持单次单个上传文件，且文件大小为2M以内，文件格式现仅支持.docx格式。</p>
+</form>
+
+<input type="file" id="fileUpload" onchange="" >
+
+<script src="js/fileUpload.js" ></script>
+<script src="js/index.js" ></script>
+
+</body>
+</html>

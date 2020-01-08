@@ -1,0 +1,19 @@
+/* 共用样式 */
+/* wrapper */
+.wui_wrapper { position:absolute; left:0; right:0; top:0; bottom:0; overflow-y: scroll; -webkit-overflow-scrolling : touch; bottom: 2.5rem;  }
+
+/** 左右浮动 */
+.fl { float: left; }
+.fr { float: right; }
+
+/** 三角箭头 */
+.triangle-up { width: 0; height: 0; border-left: .5rem solid transparent; border-right: .5rem solid transparent; border-bottom: .5rem #f1f5f7 solid; }
+
+/** 居中位置 */
+.m92 { width: 92%; padding: 0 4%; }
+
+
+
+
+
+

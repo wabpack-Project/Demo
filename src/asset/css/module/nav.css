@@ -1,0 +1,16 @@
+/* 布局 */
+.n_m92 { padding: 0 4%; width: 92%; }
+.n_m80 { padding: 0 10%; width: 80%; }
+/* 导航 */
+.nav_list { padding: 1rem 4% .8rem 4%; background: #fff; }
+.nav_list li { width: 25%; float: left; }
+.nav_con { text-align: center; padding: 0 20%; width: 60%; }
+.nav_con img { width: 100%; }
+.nav_con span { font-size: .7rem; display: inline-block; line-height: 1.4rem; color: #111; }
+
+
+
+
+
+
+

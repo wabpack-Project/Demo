@@ -1,0 +1,24 @@
+/* 二维码样式 */
+.qrCode { padding: 1.55rem 0 1.25rem 0; text-align: center; }
+.qc_img { margin: 0 auto; width: 60%; margin-bottom: .5rem; position: relative; }
+.qc_id_img { }
+.qc_id_img img { width: 100%; }
+.qc_id_invalid { position: absolute; top:0; bottom: 0; left: 0; right: 0; color: #fff; display: none; }
+.qc_void { position: absolute; top: 50%; right: 0; left: 0; margin-top: -2rem; z-index: 6; }
+.qc_void .iconshuaxin { display: inline-block; font-size: 1.5rem; height: 2rem; }
+.qc_txt { font-size: .75rem; line-height: 1.4rem; }
+.qc_mask { position: absolute; z-index: 5; top: 0; right: 0; bottom: 0; left: 0; opacity: 0.7; filter: alpha(opacity=70);-moz-opacity: 0.7; background: #000; }
+
+.qc_time { font-size: .75rem; color: #111; line-height: 2rem; }
+.qc_time span { color: #ff6050; }
+.qc_des { font-size: .85rem; color: #111; line-height: 2rem; }
+
+/* 二维码标题样式 */
+.qc_price { text-align: center; color: #111; font-size: .75rem; height: 2.25rem; line-height: 2.25rem; background: #f1f5f7; }
+.qc_price span { color: #ff6050; font-size: .85rem; }
+.qc_price em { font-size: .7rem; }
+
+/* 弹出层配置 */
+.popup_out { top: 7rem; bottom: auto; left: 8%; right: 8%; width: 84%; background: #fff; }
+
+

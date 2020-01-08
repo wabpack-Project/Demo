@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<!-- jq -->
+<script src="../jquery/jquery-1.10.2.min.js"></script>
+<!-- 数据 -->
+<!--<script src="../dataConfig/data.js" ></script>-->
+<!--&lt;!&ndash; 插件 &ndash;&gt;-->
+<!--<script src="js/ajax_jq.js" ></script>-->
+<!--<script src="js/index_jsonp.js" ></script>-->
+
+<script>
+  /*
+	$.ajax({
+		type : "get",
+		async:false,
+		url : "../dataConfig/json/babylist.json",
+		dataType : "jsonp",//数据类型为jsonp
+        jsonpCallback: "jsonpCallback",//服务端用于接收callback调用的function名的参数
+		success : function(data){
+			console.log(data);
+			$("#showcontent").text("Result:"+data.result)
+		},
+		error:function(){
+			alert('fail');
+		}
+	});
+	*/
+  
+  function jsonpCallback(data) {
+  	console.log(data);
+   
+	}
+</script>
+
+<script src="http://www.lk.cn/babylist?callback=jsonpCallback11"></script>
+
+</body>
+</html>

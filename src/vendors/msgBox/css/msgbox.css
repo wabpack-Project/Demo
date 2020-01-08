@@ -1,0 +1,22 @@
+/*// 弹框*/
+.msgbox { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 10; width: 100%; height: 100%; display: flex; justify-content: center; /* 水平居中 */ align-items: center;   /* 垂直居中 */ }
+.mb_mask { position: absolute; z-index: 5; top: 0; right: 0; bottom: 0; left: 0;  background-color: rgba(0,0,0,0.7); }
+.mb_wrapper { position: relative; z-index: 10; margin-bottom: 20%; border-radius: 8px; background: #fff; color: #fff; min-width: 260px; overflow: hidden; text-align: center; }
+/* 弹框头 */
+.mb_header { position: relative; padding: 15px 15px 10px; }
+.mb_tit { font-size: 18px; color: #323233; }
+.mb_close { position: absolute; top: 15px; right: 15px; font-size: 18px; color: #909399; }
+.mb_close i { font-style: normal; font-size: 20px; display: inline-block; line-height: 24px; }
+/* 弹框内容 */
+.mb_content { padding: 10px 15px; color: #646566; font-size: 14px; }
+.mb_text { line-height: 24px; }
+.input_tit { text-align: left; }
+.mb_input { display: inline-block; width: 100%; }
+.mb_input .text { -webkit-appearance: none; -moz-appearance: none; appearance: none; outline: none; line-height: 24px;  padding: 4px 3%; width: 100%;  border: 1px solid #dedede; border-radius: 5px; box-sizing: border-box; }
+.mb_input .invalid { border-color: #f56c6c; }
+.mb_errormsg { color: red; font-size: 12px; min-height: 18px; margin-top: 2px; text-align: left; visibility: hidden; /* visibility: visible; */ }
+/* 弹框操作按钮 */
+.mb_opts { border-top: 1px solid #ddd; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.mb_btn { border: 0; background: #fff; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; line-height: 40px; font-size: 16px; outline: none; }
+.mb_confirm { color: #1989fa; }
+.mb_cancel { border-right: 1px solid #ddd; }

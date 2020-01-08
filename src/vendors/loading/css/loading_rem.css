@@ -1,0 +1,17 @@
+.loading { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; }
+.loading_mask { position: absolute; z-index: 5; top: 0; right: 0; bottom: 0; left: 0; opacity: 0.4; -moz-opacity: 0.4; background: #000; }
+.loading_main { position: absolute; top: 50%; left: 0; z-index: 10; width: 100%; margin-top: -.4rem; text-align: center; }
+.load_text { line-height: 1.44rem; font-size: .72rem; padding-top: .4rem; color: #fff; }
+.spinner { position: relative; margin: 0 auto; width: 2rem; height: 2rem; }
+.circle { width: .16rem; height: .16rem; border-radius: 100%; background: #fff; position: absolute; animation: spinner linear 1.8s infinite; -webkit-animation: spinner linear 1.8s infinite;
+}
+.circle:nth-child(1){ left: .96rem; top: .08rem; animation-delay:0s; }
+.circle:nth-child(2){ left: 1.6rem; top: .32rem; animation-delay:0.1s; }
+.circle:nth-child(3){ left: 1.88rem; top: .96rem; animation-delay:0.1s; }
+.circle:nth-child(4){ left: 1.6rem; top: 1.6rem; animation-delay:0.2s; }
+.circle:nth-child(5){ left: .96rem; top: 1.88rem; animation-delay:0.4s; }
+.circle:nth-child(6){ left: .32rem; top: 1.6rem; animation-delay:0.5s; }
+.circle:nth-child(7){ left: .08rem; top: .96rem; animation-delay:0.6s; }
+.circle:nth-child(8){ left: .32rem; top: .32rem; animation-delay:0.7s; }
+@keyframes spinner { 0%,40%,100% {transform: scale(1);} 20% {transform: scale(3);} }
+@-webkit-keyframes spinner { 0%,40%,100% {transform: scale(1);} 20% {transform: scale(3);} }

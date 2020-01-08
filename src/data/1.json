@@ -1,0 +1,361 @@
+{
+  "user_id": "85",
+  "sale_list": [{
+    "id": "1",
+    "gid": "292047",
+    "identifier": "",
+    "key_context_Chinese": "出境船员常规体检",
+    "key_context_English": "",
+    "classification_id": "24",
+    "classification": {
+      "classification_identifier": "healthexam",
+      "classification_name": "海关体检"
+    },
+    "amount": 0,
+    "value": "",
+    "price": "214.00",
+    "is_register_related": "1",
+    "introduction": "",
+    "applicable_people_id": "1",
+    "applicable_people": {
+      "key_context_Chinese": "全部",
+      "key_context_English": "ALL"
+    },
+    "applicable_people_Chinese": "全部",
+    "applicable_people_English": "ALL",
+    "children": []
+  },
+    {
+      "id": "12",
+      "gid": "0",
+      "identifier": "",
+      "key_context_Chinese": "疫苗",
+      "key_context_English": "",
+      "classification_id": "23",
+      "classification": {
+        "classification_identifier": "vaccine",
+        "classification_name": "疫苗"
+      },
+      "amount": 0,
+      "value": "",
+      "price": "",
+      "is_register_related": "1",
+      "introduction": "",
+      "applicable_people_id": "1",
+      "applicable_people": {
+        "key_context_Chinese": "全部",
+        "key_context_English": "ALL"
+      },
+      "applicable_people_Chinese": "全部",
+      "applicable_people_English": "ALL",
+      "children": {}
+    }],
+  "vaccine": [null, null, null, null, null, null, null, null, null, null, null, null, null, {
+    "id": "13",
+    "gid": "292096",
+    "identifier": "",
+    "key_context_Chinese": "重组戊型肝炎疫苗",
+    "key_context_English": "",
+    "classification_id": "23",
+    "classification": {
+      "classification_identifier": "vaccine",
+      "classification_name": "疫苗"
+    },
+    "amount": 0,
+    "value": "",
+    "price": "185.00",
+    "is_register_related": "1",
+    "introduction": "",
+    "applicable_people_id": "1",
+    "applicable_people": {
+      "key_context_Chinese": "全部",
+      "key_context_English": "ALL"
+    },
+    "applicable_people_Chinese": "全部",
+    "applicable_people_English": "ALL",
+    "children": []
+  },
+    {
+      "id": "14",
+      "gid": "292097",
+      "identifier": "",
+      "key_context_Chinese": "四价HPV疫苗",
+      "key_context_English": "",
+      "classification_id": "23",
+      "classification": {
+        "classification_identifier": "vaccine",
+        "classification_name": "疫苗"
+      },
+      "amount": 0,
+      "value": "",
+      "price": "823.00",
+      "is_register_related": "1",
+      "introduction": "",
+      "applicable_people_id": "1",
+      "applicable_people": {
+        "key_context_Chinese": "全部",
+        "key_context_English": "ALL"
+      },
+      "applicable_people_Chinese": "全部",
+      "applicable_people_English": "ALL",
+      "children": []
+    }],
+  "drugpackage": [null, null, null, null, null, null, null, null, null, null, null, null, null, {
+    "id": "13",
+    "gid": "292096",
+    "identifier": "",
+    "key_context_Chinese": "重组戊型肝炎疫苗",
+    "key_context_English": "",
+    "classification_id": "23",
+    "classification": {
+      "classification_identifier": "vaccine",
+      "classification_name": "疫苗"
+    },
+    "amount": 0,
+    "value": "",
+    "price": "185.00",
+    "is_register_related": "1",
+    "introduction": "",
+    "applicable_people_id": "1",
+    "applicable_people": {
+      "key_context_Chinese": "全部",
+      "key_context_English": "ALL"
+    },
+    "applicable_people_Chinese": "全部",
+    "applicable_people_English": "ALL",
+    "children": []
+  },
+    {
+      "id": "14",
+      "gid": "292097",
+      "identifier": "",
+      "key_context_Chinese": "四价HPV疫苗",
+      "key_context_English": "",
+      "classification_id": "23",
+      "classification": {
+        "classification_identifier": "vaccine",
+        "classification_name": "疫苗"
+      },
+      "amount": 0,
+      "value": "",
+      "price": "823.00",
+      "is_register_related": "1",
+      "introduction": "",
+      "applicable_people_id": "1",
+      "applicable_people": {
+        "key_context_Chinese": "全部",
+        "key_context_English": "ALL"
+      },
+      "applicable_people_Chinese": "全部",
+      "applicable_people_English": "ALL",
+      "children": []
+    }],
+  "healthexam": [null, null, null, null, null, null, null, null, null, null, null, null, null, {
+    "id": "13",
+    "gid": "292096",
+    "identifier": "",
+    "key_context_Chinese": "重组戊型肝炎疫苗",
+    "key_context_English": "",
+    "classification_id": "23",
+    "classification": {
+      "classification_identifier": "vaccine",
+      "classification_name": "疫苗"
+    },
+    "amount": 0,
+    "value": "",
+    "price": "185.00",
+    "is_register_related": "1",
+    "introduction": "",
+    "applicable_people_id": "1",
+    "applicable_people": {
+      "key_context_Chinese": "全部",
+      "key_context_English": "ALL"
+    },
+    "applicable_people_Chinese": "全部",
+    "applicable_people_English": "ALL",
+    "children": []
+  },
+    {
+      "id": "14",
+      "gid": "292097",
+      "identifier": "",
+      "key_context_Chinese": "四价HPV疫苗",
+      "key_context_English": "",
+      "classification_id": "23",
+      "classification": {
+        "classification_identifier": "vaccine",
+        "classification_name": "疫苗"
+      },
+      "amount": 0,
+      "value": "",
+      "price": "823.00",
+      "is_register_related": "1",
+      "introduction": "",
+      "applicable_people_id": "1",
+      "applicable_people": {
+        "key_context_Chinese": "全部",
+        "key_context_English": "ALL"
+      },
+      "applicable_people_Chinese": "全部",
+      "applicable_people_English": "ALL",
+      "children": []
+    }],
+  "deeplyexam": [null, null, null, null, null, null, null, null, null, null, null, null, null, {
+    "id": "13",
+    "gid": "292096",
+    "identifier": "",
+    "key_context_Chinese": "重组戊型肝炎疫苗",
+    "key_context_English": "",
+    "classification_id": "23",
+    "classification": {
+      "classification_identifier": "vaccine",
+      "classification_name": "疫苗"
+    },
+    "amount": 0,
+    "value": "",
+    "price": "185.00",
+    "is_register_related": "1",
+    "introduction": "",
+    "applicable_people_id": "1",
+    "applicable_people": {
+      "key_context_Chinese": "全部",
+      "key_context_English": "ALL"
+    },
+    "applicable_people_Chinese": "全部",
+    "applicable_people_English": "ALL",
+    "children": []
+  },
+    {
+      "id": "14",
+      "gid": "292097",
+      "identifier": "",
+      "key_context_Chinese": "四价HPV疫苗",
+      "key_context_English": "",
+      "classification_id": "23",
+      "classification": {
+        "classification_identifier": "vaccine",
+        "classification_name": "疫苗"
+      },
+      "amount": 0,
+      "value": "",
+      "price": "823.00",
+      "is_register_related": "1",
+      "introduction": "",
+      "applicable_people_id": "1",
+      "applicable_people": {
+        "key_context_Chinese": "全部",
+        "key_context_English": "ALL"
+      },
+      "applicable_people_Chinese": "全部",
+      "applicable_people_English": "ALL",
+      "children": []
+    }],
+  "familydoctor": [null, null, null, null, null, null, null, null, null, null, null, null, null, {
+    "id": "13",
+    "gid": "292096",
+    "identifier": "",
+    "key_context_Chinese": "重组戊型肝炎疫苗",
+    "key_context_English": "",
+    "classification_id": "23",
+    "classification": {
+      "classification_identifier": "vaccine",
+      "classification_name": "疫苗"
+    },
+    "amount": 0,
+    "value": "",
+    "price": "185.00",
+    "is_register_related": "1",
+    "introduction": "",
+    "applicable_people_id": "1",
+    "applicable_people": {
+      "key_context_Chinese": "全部",
+      "key_context_English": "ALL"
+    },
+    "applicable_people_Chinese": "全部",
+    "applicable_people_English": "ALL",
+    "children": []
+  },
+    {
+      "id": "14",
+      "gid": "292097",
+      "identifier": "",
+      "key_context_Chinese": "四价HPV疫苗",
+      "key_context_English": "",
+      "classification_id": "23",
+      "classification": {
+        "classification_identifier": "vaccine",
+        "classification_name": "疫苗"
+      },
+      "amount": 0,
+      "value": "",
+      "price": "823.00",
+      "is_register_related": "1",
+      "introduction": "",
+      "applicable_people_id": "1",
+      "applicable_people": {
+        "key_context_Chinese": "全部",
+        "key_context_English": "ALL"
+      },
+      "applicable_people_Chinese": "全部",
+      "applicable_people_English": "ALL",
+      "children": []
+    }],
+  "accompany": [null, null, null, null, null, null, null, null, null, null, null, null, null, {
+    "id": "13",
+    "gid": "292096",
+    "identifier": "",
+    "key_context_Chinese": "重组戊型肝炎疫苗",
+    "key_context_English": "",
+    "classification_id": "23",
+    "classification": {
+      "classification_identifier": "vaccine",
+      "classification_name": "疫苗"
+    },
+    "amount": 0,
+    "value": "",
+    "price": "185.00",
+    "is_register_related": "1",
+    "introduction": "",
+    "applicable_people_id": "1",
+    "applicable_people": {
+      "key_context_Chinese": "全部",
+      "key_context_English": "ALL"
+    },
+    "applicable_people_Chinese": "全部",
+    "applicable_people_English": "ALL",
+    "children": []
+  },
+    {
+      "id": "14",
+      "gid": "292097",
+      "identifier": "",
+      "key_context_Chinese": "四价HPV疫苗",
+      "key_context_English": "",
+      "classification_id": "23",
+      "classification": {
+        "classification_identifier": "vaccine",
+        "classification_name": "疫苗"
+      },
+      "amount": 0,
+      "value": "",
+      "price": "823.00",
+      "is_register_related": "1",
+      "introduction": "",
+      "applicable_people_id": "1",
+      "applicable_people": {
+        "key_context_Chinese": "全部",
+        "key_context_English": "ALL"
+      },
+      "applicable_people_Chinese": "全部",
+      "applicable_people_English": "ALL",
+      "children": []
+    }],
+  "application": {
+    "id": "67",
+    "identifier": "663e41e192c0636e9bcd8c7380626ac5",
+    "application_time": "2019-09-22 14:54:57",
+    "completed_time": "2019-09-25",
+    "EntryorExit": "出境",
+    "destination": "法国"
+  }
+}:

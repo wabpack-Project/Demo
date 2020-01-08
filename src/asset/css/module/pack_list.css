@@ -1,0 +1,42 @@
+.choose_package { }
+/* 套餐列表 */
+.cp_list { width: 92%; padding: 0 4% 0; background: #fff; }
+.cp_list li { border-top: 1px #eee solid; padding: .5rem 0; }
+.cp_list li:first-child { border-top:none; }
+.p_item { }
+.p_item_opt { }
+.p_item_tit { padding:0 2rem; line-height: 2rem; font-size: .8rem; }
+.p_price { color: #ff6050; font-size: .9rem; padding-right: .5rem; }
+.p_price em {font-size: .6rem; }
+/* 下拉展示内容 */
+.p_item_des { position: relative; margin-top: .45rem; display: none; }
+.p_item_des .triangle-up { margin: -.2rem 0 -.01rem 2rem; }
+.p_item_con { border-radius: .3rem; background: #f1f5f7; padding: .5rem; line-height: 1rem; }
+/* 左右图标 */
+.p_item_opt .fl { padding-top: .46rem; }
+.fr.opt_drop { margin: .3rem .3rem 0 0; height: 1.5rem; width: 1.7rem; text-align: right; border-left: 1px #eee solid; }
+.p_select { font-size: 1rem; }
+.p_drop { font-size: 1rem; padding-top: .26rem; display: inline-block; }
+.iconxuanzhong { color: #ddd; }
+.iconiconfontxuanzhong4 { color: #ff6050; font-size: 1.1rem; }
+.iconxiangshang { color: #999; padding-top: .1rem; }
+.iconxiangxia { color: #999; }
+/* 套餐介绍 */
+.p_info_list { width: 92%; padding: 0 4% 0; padding-top:1rem; }
+.p_info_list li { height: 9rem; overflow: hidden; border-radius: .5rem; background: #f1f5f7; margin-bottom: .75rem; position: relative;  }
+.p_i_adorn { height: .5rem; background: #00a7ff; }
+.p_i_tit { background: #00a7ff; color: #fff; font-size: .75rem; position: absolute; top: 0; left: 0; padding: 0 .65rem; line-height: 1.7rem; border-radius:.5rem 0; }
+.p_i_des { width: 6.8rem; padding: 1.6rem 0 0 .65rem; color: #555; font-size: .55rem; line-height: 1rem; }
+.p_i_des p { color: #000; font-size: .65rem; line-height: 1.2rem; margin-bottom: .2rem; font-weight: bolder; }
+.p_i_price { position: absolute; bottom: -1.5rem; right: -1.1rem; font-size: 1rem; background: #ff6050; border-radius: 4.6rem 4rem 0 0; padding: .5rem 1.9rem 0 1.25rem; height: 3.2rem; line-height: 1.5rem; color: #fff; }
+.p_i_price em { font-size: .65rem; }
+
+/* 套餐介绍图 */
+.p_img_list { width: 92%; padding: 0 4% 0; padding-top:1rem; }
+.p_img_list li { height: 9rem;  background-size:17.25rem 9rem; margin-bottom: .75rem; }
+.p_img_list li img { height: 100%; }
+
+
+
+
+
