@@ -2,6 +2,8 @@
 .select_list li { border-top: 1px #eee solid; padding: .5rem 0; }
 .select_list li:first-child { border-top:none; }
 .select_list .s_list_tit { padding:0 2rem; line-height: 2rem; font-size: .8rem; }
+.select_list .s_l_only_tit { line-height: 2rem; font-size: .8rem; }
+.select_list .s_l_only_tit span { float: left; padding-right: .5rem; }
 .select_list .fl { padding-top: .46rem; }
 .s_select { font-size: 1rem; }
 .iconxuanzhong { color: #ddd; }

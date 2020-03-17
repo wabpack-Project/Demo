@@ -5,6 +5,15 @@
  * @returns {boolean}
  */
 var addClass = function (d, cls) {
+	// 判断cls类型
+	if (isString(cls)) {
+		cls = cls;
+	} else if (isFunction(cls)){
+		cls = cls();
+	} else {
+		console.log("className只支持callback和字符串");
+		return;
+	}
 	// 定义字符串正则
 	var reg = new RegExp('(^|\\s)' + cls + '(\\s|$)');
 	// 判断class是否存在
@@ -18,17 +27,26 @@ var addClass = function (d, cls) {
 };
 
 /**
- *
+ * 移除CLASS
  * @param d   {Object}  DOM元素
  * @param cls   {string}  class名称（只能是单个class字符串）
  * @returns {boolean}
  */
 var removeClass = function (d, cls) {
+	// 判断cls类型
+	if (isString(cls)) {
+		cls = cls;
+	} else if (isFunction(cls)){
+		cls = cls();
+	} else {
+		console.log("className只支持callback和字符串");
+		return;
+	}
 	// 定义字符串正则
 	var reg = new RegExp('(^|\\s)' + cls + '(\\s|$)');
 	// 判断class是否存在
 	if (reg.test(d.className)) {
-
+		d.className = d.className.replace(cls, '').replace(/(^\s*)|(\s*$)/g, "");
 	}
 };
 

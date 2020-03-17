@@ -1,3 +1,5 @@
+// 相对路径
+const path = require('path');
 /**
  * @fileoverview webpack 通用配置
  * @author lx
@@ -19,7 +21,7 @@ let commonConfig = {
 	// url指向静态文件目录
 	openBuildPath: './dist/',
 	// url指向静态文件地址
-	openBuildUrl: '/themes/simplicity/html/mobile_iphone/lancarecustomhouseinterfaceTianjin.html',
+	openBuildUrl: '/themes/simplicity/html/mobile_iphone/home.html',
 };
 
 // 公共类库和全局
@@ -129,6 +131,19 @@ commonConfig.vendor	= {
 	name: ['vendor', 'manifest'],
 	minChunks: Infinity,
 	// filename: '[name].bundle.js' // 生成的文件名为 vender.bundle.js	//最后生成的文件名
+},
+
+// 集中拷贝静态文件
+commonConfig.asset	= {
+	arry: [
+		{
+			from: path.resolve(__dirname, '../src/data'),
+			to: commonConfig.relativePath + 'data'
+		}
+	],
+	options: {
+
+	}
 },
 
 // 清理指定发布目录

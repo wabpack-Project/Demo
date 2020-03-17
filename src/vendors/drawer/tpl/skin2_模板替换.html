@@ -21,8 +21,8 @@
     <div class="dw_body dw_m92" style="height: <%=data.height%>;">
       <ul class="select_list">
         <%
-        var i = 0, len = data.data.length;
-        if(len == 0) {
+        var i = 0;
+        if(!data.data.province) {
         %>
         <li class="">
           <div class="no_data"><%=data.noData%></div>

@@ -33,7 +33,7 @@ console.log(imgSrc);
 import ajax from '../../vendors/ajax/config';
 import miniTpl from "../../vendors/mini-tpl/mini-tpl";
 import draw  from "../../vendors/drawer/js/drawer_m";
-import tool  from "../../vendors/Js/tool";
+import tool  from "../../vendors/tools/extension/tool";
 
 // 渲染模板
 import tpl from "./tpl";

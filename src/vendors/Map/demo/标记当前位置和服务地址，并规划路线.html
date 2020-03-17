@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+    body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7XbC3k91tN7tfyChMdEt6Q2HmTpoH8il"></script>
+  <title>浏览器定位</title>
+  
+  <style>
+    #driving_route { position: absolute; right: 0; bottom: 10px; }
+  </style>
+</head>
+<body>
+
+<div id="allmap" ></div>
+
+<div id="driving_route">查看路线</div>
+
+<script src="../js/allmap.min.js"></script>
+<script>
+  // 第一个参数当前位置坐标， 第二个参数终点坐标
+	// {lng: 123.431221, lat: 41.794951}
+	var mp = map.init({lng: 123.431221, lat: 41.794951}, {lng: 123.476898, lat: 41.767006});
+	console.log(mp);
+
+    // 规划路线
+    var driving_route = document.getElementById("driving_route");
+    driving_route.onclick = function () {
+    	// console.log("规划路线");
+    	map.drivingRoute(mp, 1);
+    };
+    
+	// map.geocoderPoint("辽宁省沈阳市和平区三纬路22号", "辽宁省");
+
+
+	// console.log(0, map.init());
+	// console.log(map.locationInfo);
+	// 	drivingRoute(endPoint, map);
+        // 辽宁省沈阳市沈河区南一经街58
+		// var aa = {lng: 123.438091, lat: 41.794656};
+
+		// H {lng: 123.476898, lat: 41.767006}
+		// 辽宁省沈阳市沈河区天坛一街立交桥
+
+		// 辽宁省沈阳市沈河区南一经街58
+		// var aa1 = {lng: 123.458501, lat: 41.77045};
+
+</script>
+
+</body>
+</html>

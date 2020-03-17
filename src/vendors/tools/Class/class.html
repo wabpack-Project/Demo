@@ -18,9 +18,14 @@
   var dom = document.getElementById("tests");
 
   var flag = hasClass(dom, "c");
-  console.log(flag);
+  // console.log(flag);
 	
   addClass(dom, "ddd fff");
+  // removeClass(dom, "ddd");
+
+	removeClass(dom, function () {
+      return "fff";
+		});
 	 
   
 </script>

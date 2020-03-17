@@ -68,7 +68,7 @@ function hah() {
 
 	});
 }
-
+hah();
 // */
 // loading
 // console.log(aa);

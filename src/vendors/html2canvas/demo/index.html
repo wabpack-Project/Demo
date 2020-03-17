@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<style>
+  #qianduanwz{ width: 900px; height: 383px; text-align: center; background:
+          url("../images/test.jpg") no-repeat center;}
+  #qianduanwz img{ width: 200px; margin-top: 60px;}
+  #qianduanwz p{ margin: 0; padding-top: 10px; font-size: 20px; color: #fff;}
+</style>
+
+<div id="qianduanwz" style="display: none">
+  <img src="../images/test.jpg" width="100" alt="">
+  <p>学习Web前端<br>关注前端微站</p>
+</div>
+
+
+<script src="../js/Base64.js"></script>
+<script src="../js/html2canvas.js"></script>
+<script>
+  /*
+	new html2canvas(document.getElementById('qianduanwz'))
+    .then(canvas => {
+		// canvas为转换后的Canvas对象
+		let oImg = new Image();
+		oImg.src = canvas.toDataURL();  // 导出图片
+		document.body.appendChild(oImg);  // 将生成的图片添加到body
+	});
+	*/
+	var promise = new html2canvas(document.getElementById('qianduanwz'));
+	console.log(promise);
+	promise.then(function (canvas) {
+      console.log(canvas);
+      
+      var imgBase64 = canvas.toDataURL();
+      console.log(imgBase64);
+      var shareImg = new Image();
+      shareImg.src = canvas.toDataURL();  // 导出图片
+			// document.body.appendChild(shareImg.src);
+			// document.write(canvas.toDataURL());
+      var imgUrl = Base64(shareImg.src);
+			
+      console.log(imgUrl);
+		var img = dataURLtoFile(shareImg, "aaa.jpg");
+		console.log(img);
+      document.body.appendChild(shareImg);  // 将生成的图片添加到body
+      
+    });
+
+	//将base64转换为文件，dataurl为base64字符串，filename为文件名（必须带后缀名，如.jpg,.png）
+	function dataURLtoFile(dataurl, filename) {
+		var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
+			bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+		while(n--){
+			u8arr[n] = bstr.charCodeAt(n);
+		}
+		return new File([u8arr], filename, {type:mime});
+	}
+	
+ 
+</script>
+
+</body>
+</html>

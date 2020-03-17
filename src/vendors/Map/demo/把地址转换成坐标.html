@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <style type="text/css">
+    body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7XbC3k91tN7tfyChMdEt6Q2HmTpoH8il"></script>
+  <title>浏览器定位</title>
+  
+  <style>
+    #driving_route { position: absolute; right: 0; bottom: 10px; }
+  </style>
+</head>
+<body>
+
+<div id="allmap" ></div>
+
+<div id="driving_route">查看路线</div>
+
+<script src="../js/allmap.js"></script>
+<script>
+
+	var map1 = new BMap.Map("allmap");
+	// var point = new BMap.Point(116.331398,39.897445);
+	// map1.centerAndZoom(point,12);
+ 
+	// map.init();
+	map.geocoderPoint("辽宁省沈阳市和平区三纬路22号", "辽宁省");
+
+
+	// console.log(0, map.init());
+	// console.log(map.locationInfo);
+	// 	drivingRoute(endPoint, map);
+	
+</script>
+
+</body>
+</html>

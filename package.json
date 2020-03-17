@@ -19,6 +19,8 @@
     "build-init": "node mod_build/build.js",
     "build-run": "webpack --config mod_build/webpack.config.build.js",
     "open-mod-build": "node mod_build/mod_build.js",
+    "start-mod-build": "node mod_build/build-strat.js",
+    "start-run": "npm run build-run && npm run open-mod-build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -29,6 +31,7 @@
     "address": "^1.1.2",
     "camelcase": "^5.3.1",
     "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.7",
     "expose-loader": "^0.7.5",
     "express": "^4.16.2",

@@ -84,19 +84,19 @@
 			jsonpCallback: obj.jsonpCallback || 'jQuery' + ('v1.11.1' + Math.random()).replace(/\D/g,'') + '_' + new Date().getTime(), //服务端用于接收callback调用的function名的参数
 			contentType: obj.contentType || "application/x-www-form-urlencoded; charset=utf-8",
 			beforeSend: function(res){
-				console.log("beforeSend");
+				// console.log("beforeSend");
 				if (beforeCallback) {
 					beforeCallback(res);
 				}
 			},
 			success: function (res) {
-				console.log("success");
+				// console.log("success");
 				if (callback) {
 					callback(res);
 				}
 			},
 			complete: function (res) {
-				console.log("complete");
+				// console.log("complete");
 				if (completeCallback) {
 					completeCallback(res);
 				}
