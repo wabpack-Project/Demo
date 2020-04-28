@@ -19,30 +19,26 @@
           <%
           var i = 0, _list = data.data;
           if(!_list) {
-          %>
-          <li class="">
+          %><li class="">
             <div class="no_data"><%=data.noData%></div>
-          </li>
-          <% } else {
+          </li><% } else {
           for(i in _list){
           var listInfo = _list[i];
           %>
           <%
           if(listInfo.name == data.dName) {
-          %>
-            <li class="cur" attr_sort="<%=data.sort%>" attr_id="<%=listInfo[data.dID]%>" attr_name="<%=listInfo.name%>">
-          <% } else { %>
-            <li attr_sort="<%=data.sort%>" attr_id="<%=listInfo[data.dID]%>" attr_name="<%=listInfo.name%>">
-          <% } %>
+          %><li class="cur" attr_sort="<%=data.sort%>" attr_id="<%=listInfo[data.dID]%>" attr_name="<%=listInfo.name%>"><% } else { %><li attr_sort="<%=data.sort%>" attr_id="<%=listInfo[data.dID]%>" attr_name="<%=listInfo.name%>"><% } %>
             <div class="c_list_tit">
               <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
               <div attr_id="<%=listInfo[data.dID]%>">
                 <%=listInfo.name%>
               </div>
             </div>
-          </li>
-          <% } } %>
+          </li><% } } %>
 </ul>
+
+
+
 
 </body>
 </html>

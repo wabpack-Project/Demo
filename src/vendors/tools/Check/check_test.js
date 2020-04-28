@@ -28,3 +28,13 @@ var checkC_E = function (tel) {
 		return true;
 	}
 };
+
+// 验证非字母、数字、中文
+var checkSpecialChar = function (str) {
+	var myreg = /^[\u4e00-\u9fa5_a-zA-Z0-9]+$/;
+	if (!myreg.test(str)) {
+		return true;
+	} else {
+		return false;
+	}
+};

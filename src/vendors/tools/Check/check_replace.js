@@ -14,7 +14,7 @@ var checkIllegalInput = function (el) {
 };
 
 // 正则验证输入价格
-onlyPrice = function () {
+var onlyPrice = function () {
 	var v = this.val();
 	newV = v.replace(/[^\d.]/g, "") //清除"数字"和"."以外的字符
 	.replace(/^\./g, "") //验证第一个字符是数字
@@ -27,7 +27,7 @@ onlyPrice = function () {
 	}
 	this.val(newV);
 	return newV;
-},
+};
 
 // 绑定包含中文输入验证(有不足)
 var checkCNbind = function (el) {

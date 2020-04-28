@@ -10,8 +10,11 @@
 .dw_h_name { color: #111; font-size: .85rem; padding: 0 1.8rem; text-align: center; }
 .dw_body { overflow-y: scroll; background: #fff; max-height:22rem; }
 
+/* 包含头、尾 */
 
-
-
+.dw_header { }
+.dw_header { }
+.dw_main { }
+.dw_footer { }
 
 

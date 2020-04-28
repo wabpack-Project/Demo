@@ -2,7 +2,7 @@
 prices(document.getElementsByClassName("quantity"), {
 	isTpl: false,
 	minNum: 0,
-	maxNum: 10.5,
+	maxNum: 20.5,
 	stepVal	: 1,					// 每次增加或减少的值
 	digit		: 2,					// 小数保留位数
 	isDisabled: false,

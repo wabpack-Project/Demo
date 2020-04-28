@@ -16,7 +16,7 @@
 .tab_head { width: 100%; overflow-x: auto; padding-bottom: .4rem; }
 .tab_body { max-height: 19rem; overflow-y: auto; padding-bottom: .5rem; }
 .tab_list { display: inline-block; border-bottom: none; height: 2.4rem; white-space: nowrap; position: relative; padding-top: .1rem; }
-.tab_list li { display: inline-block; line-height: 2.4rem; margin-left: 1.2rem; color: #000; font-size: .75rem; }
+.tab_list li { display: none; line-height: 2.4rem; margin-left: 1.2rem; color: #000; font-size: .75rem; }
 .tab_list li:first-child { margin-left: 0; }
 .tab_list .line { background: #ff6050; width: 1.4rem; height: .15rem;
     position: absolute; bottom: 0; left: .5rem; }

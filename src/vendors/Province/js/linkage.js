@@ -155,7 +155,21 @@
 			'          <li class="">\n' +
 			'            <div class="no_data"><%=data.noData%></div>\n' +
 			'          </li>\n' +
-			'          <% } else {\n' +
+			'          <% } else { %>\n' +
+			'          <%\n' +
+			'          var provinceAll = data.checkAll["province"];\n' +
+			'          if(provinceAll) {\n' +
+			'          %>\n' +
+			'          <li attr_sort="province" attr_id="<%=provinceAll.id%>" attr_name="<%=provinceAll.name%>">\n' +
+			'            <div class="c_list_tit">\n' +
+			'              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>\n' +
+			'              <div attr_id="<%=provinceAll.id%>">\n' +
+			'                <%=provinceAll.name%>\n' +
+			'              </div>\n' +
+			'            </div>\n' +
+			'          </li>\n' +
+			'          <% } %>\n' +
+			'          <%\n' +
 			'          for(i in province_d){\n' +
 			'          var province = province_d[i];\n' +
 			'          %>\n' +
@@ -178,13 +192,28 @@
 			'        <!-- 市 -->\n' +
 			'        <ul class="city_list list_bt city_l" style="display: none" >\n' +
 			'          <%\n' +
-			'          var j = 0, city_d = data.data.city[data.provinceId];\n' +
-			'          if(!city_d) {\n' +
+			'          var j = 0;\n' +
+			'          if(!data.data.city) {\n' +
 			'          %>\n' +
 			'          <li class="">\n' +
 			'            <div class="no_data"><%=data.noData%></div>\n' +
 			'          </li>\n' +
-			'          <% } else {\n' +
+			'          <% } else { %>\n' +
+			'          <%\n' +
+			'          var city_d = data.data.city[data.provinceId];\n' +
+			'          var cityAll = data.checkAll["city"];\n' +
+			'          if(cityAll) {\n' +
+			'          %>\n' +
+			'          <li attr_sort="city" attr_id="<%=cityAll.id%>" attr_name="<%=cityAll.name%>">\n' +
+			'            <div class="c_list_tit">\n' +
+			'              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>\n' +
+			'              <div attr_id="<%=cityAll.id%>">\n' +
+			'                <%=cityAll.name%>\n' +
+			'              </div>\n' +
+			'            </div>\n' +
+			'          </li>\n' +
+			'          <% } %>\n' +
+			'          <%\n' +
 			'          for(j in city_d){\n' +
 			'          var city = city_d[j];\n' +
 			'          %>\n' +
@@ -207,13 +236,28 @@
 			'        <!-- 区 -->\n' +
 			'        <ul class="city_list list_bt area_l" style="display: none">\n' +
 			'          <%\n' +
-			'          var k = 0, area_d = data.data.area[data.cityId];\n' +
-			'          if(!area_d) {\n' +
+			'          var k = 0;\n' +
+			'          if(!data.data.area) {\n' +
 			'          %>\n' +
 			'          <li class="">\n' +
 			'            <div class="no_data"><%=data.noData%></div>\n' +
 			'          </li>\n' +
-			'          <% } else {\n' +
+			'          <% } else { %>\n' +
+			'          <%\n' +
+			'          var area_d = data.data.area[data.cityId];\n' +
+			'          var areaAll = data.checkAll["area"];\n' +
+			'          if(areaAll) {\n' +
+			'          %>\n' +
+			'          <li attr_sort="area" attr_id="<%=areaAll.id%>" attr_name="<%=areaAll.name%>">\n' +
+			'            <div class="c_list_tit">\n' +
+			'              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>\n' +
+			'              <div attr_id="<%=areaAll.id%>">\n' +
+			'                <%=areaAll.name%>\n' +
+			'              </div>\n' +
+			'            </div>\n' +
+			'          </li>\n' +
+			'          <% } %>\n' +
+			'          <%\n' +
 			'          for(k in area_d){\n' +
 			'          var area = area_d[k];\n' +
 			'          %>\n' +
@@ -236,13 +280,28 @@
 			'        <!-- 街道 -->\n' +
 			'        <ul class="city_list list_bt street_l"  style="display: none" >\n' +
 			'          <%\n' +
-			'          var i = 0, street_d = data.data.street;\n' +
-			'          if(!street_d) {\n' +
+			'          var i = 0;\n' +
+			'          if(!data.data.street) {\n' +
 			'          %>\n' +
 			'          <li class="">\n' +
 			'            <div class="no_data"><%=data.noData%></div>\n' +
 			'          </li>\n' +
-			'          <% } else {\n' +
+			'          <% } else { %>\n' +
+			'          <%\n' +
+			'          var street_d = data.data.street[data.areaId];\n' +
+			'          var streetAll = data.checkAll["street"];\n' +
+			'          if(streetAll) {\n' +
+			'          %>\n' +
+			'          <li attr_sort="street" attr_id="<%=streetAll.id%>" attr_name="<%=streetAll.name%>">\n' +
+			'            <div class="c_list_tit">\n' +
+			'              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>\n' +
+			'              <div attr_id="<%=streetAll.id%>">\n' +
+			'                <%=streetAll.name%>\n' +
+			'              </div>\n' +
+			'            </div>\n' +
+			'          </li>\n' +
+			'          <% } %>\n' +
+			'          <%\n' +
 			'          for(i in street_d){\n' +
 			'          var street = street_d[i];\n' +
 			'          %>\n' +
@@ -265,13 +324,28 @@
 			'        <!-- 社区 -->\n' +
 			'        <ul class="city_list list_bt village_l"  style="display: none" >\n' +
 			'          <%\n' +
-			'          var i = 0, village_d = data.data.village;\n' +
-			'          if(!village_d) {\n' +
+			'          var i = 0;\n' +
+			'          if(!data.data.village) {\n' +
 			'          %>\n' +
 			'          <li class="">\n' +
 			'            <div class="no_data"><%=data.noData%></div>\n' +
 			'          </li>\n' +
-			'          <% } else {\n' +
+			'          <% } else { %>\n' +
+			'          <%\n' +
+			'          var village_d = data.data.village[data.streetId];\n' +
+			'          var villageAll = data.checkAll["village"];\n' +
+			'          if(villageAll) {\n' +
+			'          %>\n' +
+			'          <li attr_sort="village" attr_id="<%=villageAll.id%>" attr_name="<%=villageAll.name%>">\n' +
+			'            <div class="c_list_tit">\n' +
+			'              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>\n' +
+			'              <div attr_id="<%=villageAll.id%>">\n' +
+			'                <%=villageAll.name%>\n' +
+			'              </div>\n' +
+			'            </div>\n' +
+			'          </li>\n' +
+			'          <% } %>\n' +
+			'          <%\n' +
 			'          for(i in village_d){\n' +
 			'          var village = village_d[i];\n' +
 			'          %>\n' +
@@ -294,13 +368,28 @@
 			'        <!-- 小区 -->\n' +
 			'        <ul class="city_list list_bt community_l"  style="display: none" >\n' +
 			'          <%\n' +
-			'          var i = 0, community_d = data.data.community;\n' +
-			'          if(!community_d) {\n' +
+			'          var i = 0;\n' +
+			'          if(!data.data.community) {\n' +
 			'          %>\n' +
 			'          <li class="">\n' +
 			'            <div class="no_data"><%=data.noData%></div>\n' +
 			'          </li>\n' +
-			'          <% } else {\n' +
+			'          <% } else { %>\n' +
+			'          <%\n' +
+			'          var community_d = data.data.community[data.villageId];\n' +
+			'          var communityAll = data.checkAll["community"];\n' +
+			'          if(communityAll) {\n' +
+			'          %>\n' +
+			'          <li attr_sort="community" attr_id="<%=communityAll.id%>" attr_name="<%=communityAll.name%>">\n' +
+			'            <div class="c_list_tit">\n' +
+			'              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>\n' +
+			'              <div attr_id="<%=communityAll.id%>">\n' +
+			'                <%=communityAll.name%>\n' +
+			'              </div>\n' +
+			'            </div>\n' +
+			'          </li>\n' +
+			'          <% } %>\n' +
+			'          <%\n' +
 			'          for(i in community_d){\n' +
 			'          var community = community_d[i];\n' +
 			'          %>\n' +
@@ -327,34 +416,25 @@
 			'    <!--</div>-->\n' +
 			'  </div>\n' +
 			'</div>',
-		listTpl: '<ul class="city_list list_bt <%=data.sort%>_l" >\n' +
-			'          <%\n' +
+		listTpl1: '          <%\n' +
 			'          var i = 0, _list = data.data;\n' +
 			'          if(!_list) {\n' +
-			'          %>\n' +
-			'          <li class="">\n' +
+			'          %><li class="">\n' +
 			'            <div class="no_data"><%=data.noData%></div>\n' +
-			'          </li>\n' +
-			'          <% } else {\n' +
+			'          </li><% } else {\n' +
 			'          for(i in _list){\n' +
 			'          var listInfo = _list[i];\n' +
 			'          %>\n' +
 			'          <%\n' +
 			'          if(listInfo.name == data.dName) {\n' +
-			'          %>\n' +
-			'            <li class="cur" attr_sort="<%=data.sort%>" attr_id="<%=listInfo[data.dID]%>" attr_name="<%=listInfo.name%>">\n' +
-			'          <% } else { %>\n' +
-			'            <li attr_sort="<%=data.sort%>" attr_id="<%=listInfo[data.dID]%>" attr_name="<%=listInfo.name%>">\n' +
-			'          <% } %>\n' +
+			'          %><li class="cur" attr_sort="<%=data.sort%>" attr_id="<%=listInfo[data.dID]%>" attr_name="<%=listInfo.name%>"><% } else { %><li attr_sort="<%=data.sort%>" attr_id="<%=listInfo[data.dID]%>" attr_name="<%=listInfo.name%>"><% } %>\n' +
 			'            <div class="c_list_tit">\n' +
 			'              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>\n' +
 			'              <div attr_id="<%=listInfo[data.dID]%>">\n' +
 			'                <%=listInfo.name%>\n' +
 			'              </div>\n' +
 			'            </div>\n' +
-			'          </li>\n' +
-			'          <% } } %>\n' +
-			'</ul>',
+			'          </li><% } } %>',
 	};
 
 	/**
@@ -673,6 +753,33 @@
 			sureTxt: "确定",		// 确定文字
 			cancelTxt: "取消",	// 取消文字
 			noData: "暂无信息",
+			// 列表增加全部
+			checkAll: {
+				// province: {
+				// 	id: "011",
+				// 	name: "全部",
+				// },
+				// city: {
+				// 	id: "032",
+				// 	name: "全部",
+				// },
+				area: {
+					id: "0",
+					name: "全部",
+				},
+				street: {
+					id: "0",
+					name: "全部",
+				},
+				// village: {
+				// 	id: "0",
+				// 	name: "全部",
+				// },
+				// community: {
+				// 	id: "0",
+				// 	name: "全部",
+				// },
+			},
 			// Class配置
 			sureBtn: "confirm_opt",		// 确定按钮class
 			cancelBtn: "cancel_opt",	// 取消按钮class
@@ -690,6 +797,7 @@
 			isCancel: false,		// 是否显示取消操作
 			// 数据相关
 			data: null,				// 是否传入数据
+			curCityInfo: null,	// 当前城市信息
 			time: 2000,				// 定时器
 			level: 6,					// 联动层级数量
 			// 回调方法
@@ -722,6 +830,20 @@
 			// console.log(this.opts);
 			// 拼接替换数据
 			// var d = obj;
+			// 判断是否有城市信息
+			// if (this.opts.curCityInfo) {
+			// 	global.selectCity = this.opts.curCityInfo;
+			// } else {
+			// 	// 清空临时地址信息
+			// 	global.selectCity = {};
+			// }
+			// console.log(global.selectCity);
+			// console.log(global.firstFlag);
+			// 清空临时地址信息
+			global.selectCity = {};
+			global.firstFlag = false;
+			global.isMunicipal = false;
+			// 设置HASH
 			obj.hash = this.hash;
 			// 获取插件模板
 			var _tpl = getTpl(tpl, this.opts.replaceTpl, obj);
@@ -747,7 +869,13 @@
 			// 获取TAB元素
 			var tabEl = _dom.getElementsByClassName("tab_head")[0].getElementsByTagName("li");
 			// 根据联动层级数量显示对应的TAB
-			this.hideTab(tabEl, obj.level, _dom);
+			this.hideTab(tabEl, obj.level, true, _dom);
+			// 判断市列表只有一条数据
+			var cityDom = _dom.getElementsByClassName("tab_body")[0].getElementsByClassName("city_l")[0];
+			if (cityDom.getElementsByTagName("li").length == 1) {
+				tabEl[1].style.display = "none";
+				global.isMunicipal = true;
+			}
 			// 判断是否有回调方法，没有绑定默认事件
 			if (this.opts.onShow) {
 				this.opts.onShow(_dom, this, tabEl);
@@ -760,41 +888,83 @@
 
 		},
 		// TAB操作，默认显示第一个TAB
-		hideTab: function(tabEl, lev, dom) {
+		hideTab: function(tabEl, lev, initFlag, dom) {
 			// 默认隐藏所有选项卡
 			var i = 0, flag = true, last = 0, len = tabEl.length;
 			// 循环遍历
 			for (; i<len; i++){
 				// 默认全部隐藏
-				tabEl[i].style.display = "none";
+				// tabEl[i].style.display = "none";
+				// 判断是第一次
+				// console.log(lev);
+				// 判断是否超出层级数
+				if (i >= this.opts.level) {
+					tabEl[i].style.display = "none";
+					continue;
+				}
 				// 判断是否有已选择值
 				if (tabEl[i].textContent == "请选择"){
-					// 判断是首次加载, 不触发显示选项卡操作
-					if (lev == this.opts.level) {
-						console.log("首次加载~");
-					} else if (flag) {	// 判断不是第一个请选择
-						tabEl[i].style.display = "inline-block";
-						// 关闭显示操作
+					// console.log(lev);
+					// console.log(this.opts.level);
+					if (initFlag){
+						if (i > 0) {
+							tabEl[i].style.display = "none";
+						} else {
+							last = i;
+						}
+						continue;
+						// 储存最后一个，请选择值
+						// last = i;
+					} else if (!flag){ 	// 判断是第一次出现，并标记
+						// 显示当前选项卡
+						// tabEl[i].style.display = "inline-block";
+						tabEl[i].style.display = "none";
+						continue;
+						// 储存最后一个，请选择值
+						last = i;
+						// 标记为不可进入
 						flag = false;
-						// 标记当前是第一个选项卡
 					}
+					// 储存最后一个，请选择值
+					last = i;
+					// 标记为不可进入
+					flag = false;
+
+
+					// return;
+					// // 判断是首次加载, 不触发显示选项卡操作
+					// if (lev == this.opts.level) {
+					// 	console.log("首次加载~");
+					// } else if (flag) {	// 判断不是第一个请选择
+					// 	tabEl[i].style.display = "inline-block";
+					// 	// 关闭显示操作
+					// 	flag = false;
+					// 	// 标记当前是第一个选项卡
+					//
+					// }
 				} else {
 					// 判断是否超出层级数
-					if (i < lev) {
-						tabEl[i].style.display = "inline-block";
+					if (i >= lev) {
+						// tabEl[i].style.display = "inline-block";
+						tabEl[i].style.display = "none";
+						continue;
+						// 储存最后一个，非请选择值
+						last = i;
 					}
 					// 储存最后一个，非请选择值
 					last = i;
 				}
 			}
+			// 存储最后一个值
+			this.last = last;
 			// 判断是首次加载, 设置选项卡停留在最后
-			if (lev == this.opts.level) {
-				console.log("不是请选择，首次加载~");
+			// if (lev == this.opts.level) {
+			// 	console.log("不是请选择，首次加载~");
 				// this.updateTab(tabEl[i]);
-				this.last = last;
+				// this.last = last;
 				// 选中操作
-				this.selectTabHand(tabEl[last], tabEl, dom);
-			}
+				// this.selectTabHand(tabEl[last], tabEl, dom);
+			// }
 
 			// 判断第一项是否有值，没值默认显示第一个
 			// if (tabEl[0].textContent == "请选择"){
@@ -815,10 +985,14 @@
 		// 绑定事件
 		bindEvent: function (dom, obj, tabEl) {
 			// 绑定联动列表点击事件
-			this.listClickEvent(dom, tabEl);
+			// this.listClickEvent(dom, tabEl);
 			// return;
 			// 绑定选项卡点击事件
 			this.tabClickEvent(tabEl, dom);
+			// console.log(this.last);
+			// 模拟点击事件(控制点击最后一个TAB)
+			this.selectTabHand(tabEl[this.last], tabEl, dom);
+
 			return;
 			setTimeout(function () {
 				var plugObj = {
@@ -830,20 +1004,33 @@
 			}, obj.opts.time);
 		},
 		// 绑定联动列表点击事件
-		listClickEvent: function(dom, tabEl) {
+		listClickEvent: function(dom, tabEl, sort) {
 			var _this = this;
+			// console.log(this.last);
 			// 获取要绑定元素
-			var el = dom.getElementsByClassName("tab_body")[0].getElementsByTagName("ul")[this.last].getElementsByTagName("li");	// 联动列表
+			// var el = dom.getElementsByClassName("tab_body")[0].getElementsByTagName("ul")[this.last].getElementsByTagName("li");		// 联动列表
+			var el = dom.getElementsByTagName("li");		// 联动列表
+			// console.log(el);
 			// 定义循环变量初始值
 			var i = 0, len = el.length;
 			// 遍历联动列表，绑定点击事件
 			while (i < len) {
 				// 绑定支付方式点击事件
 				el[i].onclick = function(){
+					// console.log(this);
 					// 选中操作
 					_this.selectCityHand(this, el, tabEl);
 				};
 				i++;
+			}
+			// 设置默认不是直辖市
+			// if (sort == "city") {
+			// 	global.isMunicipal = false;
+			// }
+			// 判断列表只有一条数据时，模拟点击
+			if (len == 1 && sort == "city") {
+				global.isMunicipal = true;
+				el[0].click();
 			}
 		},
 		// 绑定选项卡点击事件
@@ -858,11 +1045,11 @@
 				tabEl[j].index = j;
 				// 绑定支付方式点击事件
 				tabEl[j].onclick = function(){
+					// 更新当前选项卡信息
+					_this.last = this.index;
+					// console.log(this.index);
 					// 选中操作
 					_this.selectTabHand(this, tabEl, dom);
-					// 更新当前选项卡信息
-					_this.last = j;
-					console.log(j);
 				};
 			}
 			/*
@@ -880,6 +1067,10 @@
 		},
 		// 选中选项卡操作
 		selectTabHand: function(el, elArr, dom) {
+			// 判断参数是否存在
+			if (!dom) {
+				dom = this.el;
+			}
 			// console.log(el);
 			// 更新选项卡状态
 			this.updateTab(el);
@@ -891,12 +1082,13 @@
 			// 获取当前选项卡类别
 			var _sort = el.getAttribute("attr_sort");
 			var curSortUl = _sort + "_l";
+			var newList = dom.getElementsByClassName(curSortUl)[0];
 			// 隐藏所有列表
 			this.hideAllList(dom);
 			// 显示当前类别列表
-			dom.getElementsByClassName(curSortUl)[0].style.display = "block";
+			newList.style.display = "block";
 			// 绑定当前列表点击事件
-			this.listClickEvent(dom, elArr);
+			this.listClickEvent(newList, elArr);
 		},
 		// 选中项操作
 		selectCityHand: function (el, elArr, tabEl) {
@@ -924,49 +1116,58 @@
 					_sort = el.getAttribute("attr_sort");
 			// console.log(_id, _name, _sort);
 			// console.log(tabEl);
+			// 获取当前城市信息
+			var cacheCityInfo = this.opts.curCityInfo;
+			// 清空下一级已存在值
+			this.clearNextCity(this.opts.curCityInfo, _sort);
+			console.log(global.selectCity);
+			// 清空历史值
+			// console.log(global.selectCity);
 			// 根据类别存储值
 			switch (_sort) {
 				case "province":
+					// global.selectCity = setCityInit()
 					global.selectCity.province = {
 						id: _id,
 						name: _name,
 					};
-					this.changeTab(global.selectCity.province, tabEl, 0);
+					global.isMunicipal = false;
+					this.changeTab(global.selectCity.province, tabEl, 0, "province");
 					break;
 				case "city":
 					global.selectCity.city = {
 						id: _id,
 						name: _name,
 					};
-					this.changeTab(global.selectCity.city, tabEl, 1);
+					this.changeTab(global.selectCity.city, tabEl, 1, "city");
 					break;
 				case "area":
 					global.selectCity.area = {
 						id: _id,
 						name: _name,
 					};
-					this.changeTab(global.selectCity.area, tabEl, 2);
+					this.changeTab(global.selectCity.area, tabEl, 2, "area");
 					break;
 				case "street":
 					global.selectCity.street = {
 						id: _id,
 						name: _name,
 					};
-					this.changeTab(global.selectCity.street, tabEl, 3);
+					this.changeTab(global.selectCity.street, tabEl, 3, "street");
 					break;
 				case "village":
 					global.selectCity.village = {
 						id: _id,
 						name: _name,
 					};
-					this.changeTab(global.selectCity.village, tabEl, 4);
+					this.changeTab(global.selectCity.village, tabEl, 4, "village");
 					break;
 				case "community":
 					global.selectCity.community = {
 						id: _id,
 						name: _name,
 					};
-					this.changeTab(global.selectCity.community, tabEl, 5);
+					this.changeTab(global.selectCity.community, tabEl, 5, "community");
 					break;
 				default:
 					break;
@@ -974,7 +1175,7 @@
 			// console.log(global.city);
 		},
 		// 更新选项卡
-		changeTab: function (obj, tabEl, n) {
+		changeTab: function (obj, tabEl, n, levName) {
 			var tab_n = tabEl[n+1];		// 新TAB
 			var tab_o = tabEl[n];			// 老TAB
 
@@ -985,6 +1186,10 @@
 				removePlug(this.el, {
 					hash: this.hash,
 				});
+				console.log(global.selectCity);
+				// 合并新生成的值和上一次生成的值
+				// this.mergObj(global.selectCity, this.opts.curCityInfo);
+				// console.log(global.selectCity);
 				// 页面赋值回调方法
 				this.opts.assignmentHand && this.opts.assignmentHand(global.selectCity, this.el);
 				return;
@@ -998,10 +1203,15 @@
 			// 判断没有下一级联动没有数据
 			if (!data){
 				console.log("下一级数据为空~");
+
 				// 移除联动插件
 				removePlug(this.el, {
 					hash: this.hash,
 				});
+				// console.log(global.selectCity);
+				// 合并新生成的值和上一次生成的值
+				// this.mergObj(global.selectCity, this.opts.curCityInfo);
+				// console.log(global.selectCity);
 				// 页面赋值回调方法
 				this.opts.assignmentHand && this.opts.assignmentHand(global.selectCity, this.el);
 				return;
@@ -1011,9 +1221,16 @@
 			tab_n.textContent = "请选择";
 			tab_n.style.display = "inline-block";
 
-			// var _name = tab_n
 			// 隐藏当前选项卡之后的选项卡
 			this.hideTab(tabEl, n+2);
+			// 判断类别是市
+			// if (global.isMunicipal) {
+			// 	tabEl[1].style.display = "none";
+			// }
+			// 更新是直辖市状态
+			if (global.isMunicipal) {
+				tabEl[1].style.display = "none";
+			}
 			// 更新选项卡状态
 			this.updateTab(tab_n);
 			// 更新数据
@@ -1043,27 +1260,48 @@
 				dID: dID,
 				dName: dName,
 			};
+
 			// console.log(d);
 			// 获取列表模板
 			if (this.opts.updateList) {
 				// 列表模板
-				var tpl = this.opts.updateList(global.listTpl, d);
+				var tpl = this.opts.updateList(global.listTpl1, d);
+				// 获取是否增加全部参数
+				var _checkAll = this.opts.checkAll;
+				// 判断是否增加全部项
+				if (_checkAll[sort]) { // 判断分类是否配置全部项
+					// console.log("当前分类增加全部项~");
+					var allTpl = '<li attr_sort="'+ sort +'" attr_id="'+ _checkAll[sort].id +'" attr_name="'+ _checkAll[sort].name +'">\n' +
+						'  <div class="c_list_tit">\n' +
+						'    <span class="iconfont iconiconfontxuanzhong4 s_select"></span>\n' +
+						'    <div attr_id="'+ _checkAll[sort].id +'">\n' +
+						'      '+ _checkAll[sort].name +'\n' +
+						'    </div>\n' +
+						'  </div>\n' +
+						'</li>';
+					tpl = allTpl + tpl;
+				} else {
+					console.log("当前分类没有增加全部项~");
+				}
 				// console.log(tpl);
 				// 模板转换成DOM, 并返回DOM
-				var _dom = parseDom(tpl)[0];
+				var _dom = tpl;
 				// console.log(_dom);
 				// 获取清空列表信息
 				var ulClass = sort + "_l";		// 拼接列表Class
 				var parentEl = document.getElementsByClassName(ulClass)[0].parentNode;		// 获取父级元素
 				// console.log(parentEl);
 				// 移除现有列表
-				removeBeDom(ulClass);
+				// removeBeDom(ulClass);
+				clearChildNodes(ulClass);
 				// 显示新列表
-				this.updateDom(_dom, parentEl, sort, sort_o, tabEl);
+				// this.updateDom_o(_dom, parentEl, sort, sort_o, tabEl);
+				// 更新对应列表
+				this.updateDom(_dom, sort, sort_o, tabEl);
 			}
 		},
 		// 新增列表，隐藏之前的列表显示新列表
-		updateDom: function (dom, parentEl, sort, sort_o, tabEl) {
+		updateDom_o: function (dom, parentEl, sort, sort_o, tabEl) {
 			// 获取新老列表class
 			var newClass = sort + "_l";		// 拼接列表Class
 			var oldClass = sort_o + "_l";		// 拼接列表Class
@@ -1075,6 +1313,21 @@
 			document.getElementsByClassName(newClass)[0].style.display = "block";
 			// 新列表绑定点击事件
 			this.bindListClickEvent(parentEl, tabEl);
+		},
+		// 更新对应列表，隐藏之前的列表显示新数据
+		updateDom: function (dom, sort, sort_o, tabEl) {
+			// 获取新老列表class
+			var newClass = sort + "_l";		// 拼接列表Class
+			var oldClass = sort_o + "_l";		// 拼接列表Class
+			var newList = document.getElementsByClassName(newClass)[0];
+			// 新增列表
+			newList.innerHTML = dom;
+			// 隐藏老列表
+			document.getElementsByClassName(oldClass)[0].style.display = "none";
+			// 显示新列表
+			newList.style.display = "block";
+			// 新列表绑定点击事件
+			this.listClickEvent(newList, tabEl, sort);
 		},
 		// 绑定事件
 		bindListClickEvent: function (dom, tabEl) {
@@ -1093,7 +1346,48 @@
 				i++;
 			}
 		},
-
+		// 合并新值和上一次值
+		mergObj: function (new_v, old_v) {
+			var i;
+			for (i in new_v) {
+				if (!new_v[i]){
+					new_v[i] = old_v[i];
+				}
+			}
+			console.log(new_v);
+			/*
+			if (!global.selectCity.province) {
+				global.selectCity.province = cacheCityInfo.province;
+			}
+			if (!global.selectCity.city) {
+				global.selectCity.city = cacheCityInfo.city;
+			}
+			if (!global.selectCity.area) {
+				global.selectCity.area = cacheCityInfo.area;
+			}
+			if (!global.selectCity.street) {
+				global.selectCity.street = cacheCityInfo.street;
+			}
+			if (!global.selectCity.village) {
+				global.selectCity.village = cacheCityInfo.village;
+			}
+			*/
+			return ;
+		},
+		clearNextCity: function (obj, levName) {
+			// 判断不是第一次点击跳出
+			if (global.firstFlag) return;
+			var i;
+			for (i in obj) {
+				if (i == levName) {
+					break;
+				}
+				global.selectCity[i] = obj[i];
+			}
+			// 标记第一次点击
+			global.firstFlag = true;
+			// console.log(global.selectCity);
+		},
 
 	};
 

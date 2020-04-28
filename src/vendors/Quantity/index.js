@@ -11,7 +11,7 @@ quantity(document.getElementsByClassName("quantity"), {
 	},
 });
 
-/*
+// /*
 // 在指定元素能生成并绑定事件
 quantity(document.getElementsByClassName("quantityT"), {
 	minNum: 3,
@@ -23,4 +23,4 @@ quantity(document.getElementsByClassName("quantityT"), {
 		el.value = v + "小时";
 	}
 });
-*/
+// */
