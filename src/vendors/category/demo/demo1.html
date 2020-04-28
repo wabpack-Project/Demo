@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+  <title>Province</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  
+  <link href="../css/index.css" rel="stylesheet" >
+  <script src="../../jquery/jquery-1.10.2.min.js"></script>
+  <script src="http://www.lk.cn/themes/simplicity/js/json/cache_address2020_02_021523.js"></script>
+  
+  <script src="http://m.lk.cn/themes/simplicity/js/json/cache_addresssw.js"></script>
+  
+</head>
+<body>
+
+<!-- 省市区街道四级联动 -->
+<div class="drawer" style="display: block" >
+  <div class="drawer_mask"></div>
+  <div class="drawer_out">
+    <!--<div class="drawer_cont">-->
+    <div class="dw_head dw_m92">
+      <div class="fl">
+        <a href="javascript:;" class="cancel  <%=data.cancelBtn+'-'+data.hash%>">取消</a>
+      </div>
+      <div class="fr">
+        <a href="javascript:;" class="confirm  <%=data.sureBtn+'-'+data.hash%>">确认</a>
+      </div>
+      <div class="dw_h_name">请选择所在地区</div>
+    </div>
+    <div class="dw_body dw_m92">
+      <!-- 选项卡 -->
+      <div class="tab_head">
+        <ul class="tab_list">
+          <li>巴音郭楞蒙古</li>
+          <li>请选择巴</li>
+          <li>巴音郭楞蒙古</li>
+          <li>巴音郭楞蒙古</li>
+          <!--<li>巴音郭楞蒙古</li>-->
+          <div class="line"></div>
+        </ul>
+      </div>
+      
+      <!-- 列表 -->
+      <div class="tab_body">
+        <ul class="city_list list_bt province" >
+          <li>
+            <div class="c_list_tit">
+              <div>
+                维吾尔
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="c_list_tit cur">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div>
+                巴音郭楞蒙古
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="c_list_tit">
+              <div>
+                巴音郭楞蒙古
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+    <!--</div>-->
+  </div>
+</div>
+
+<script>
+  $(".tab_list li").click(function () {
+  	// console.log($(this).width());
+    // console.log($(".line").width());
+    
+    // 选中效果文字居中
+    var li_marginLeft = ($(this).width()-$(".line").width())/2;
+	// 选中项距左侧距离
+  	var _left = $(this).position().left;
+  	// 样式距离
+	var li_style = parseFloat($(this).css('margin-left'));
+	// 屏幕宽度
+    var aa = 11;
+	
+		console.log(_left);
+		console.log(li_marginLeft);
+		console.log("li_style", li_style);
+		console.log(_left + li_style + li_marginLeft);
+		
+    $(".line").animate({
+			left: _left + li_style + li_marginLeft
+		}, 500)
+	});
+
+	// 选中效果文字居中
+	// var li_marginLeft = ($(".tab_list").find("li:first").width()-$(".line").width())/2;
+	// console.log(li_marginLeft);
+	// $(".line").animate({
+	// 	left: li_marginLeft
+	// }, 500);
+
+	$(".tab_head").scrollLeft(100, 0);
+
+	// $('.tab_head').animate({
+	// 		scrollTop: $("#stop").offset().top
+	// 	},
+    // 500);
+ 
+</script>
+
+</body>
+</html>

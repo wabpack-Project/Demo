@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+  <title>Province</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  
+  <link href="../css/index.css" rel="stylesheet" >
+  <script src="../../jquery/jquery-1.10.2.min.js"></script>
+  <script src="http://www.lk.cn/themes/simplicity/js/json/cache_address2020_02_021523.js"></script>
+  
+</head>
+<body>
+
+<!-- 省市区街道四级联动 -->
+<ul class="city_list list_bt <%=data.sort%>_l" >
+          <%
+          var i = 0, _list = data.data;
+          if(!_list) {
+          %><li class="">
+            <div class="no_data"><%=data.noData%></div>
+          </li><% } else {
+          for(i in _list){
+          var listInfo = _list[i];
+          %>
+          <%
+          if(listInfo.name == data.dName) {
+          %><li class="cur" attr_sort="<%=data.sort%>" attr_id="<%=listInfo[data.dID]%>" attr_name="<%=listInfo.name%>"><% } else { %><li attr_sort="<%=data.sort%>" attr_id="<%=listInfo[data.dID]%>" attr_name="<%=listInfo.name%>"><% } %>
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=listInfo[data.dID]%>">
+                <%=listInfo.name%>
+              </div>
+            </div>
+          </li><% } } %>
+</ul>
+
+
+
+
+</body>
+</html>

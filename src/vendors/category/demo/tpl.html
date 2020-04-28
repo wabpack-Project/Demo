@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+  <title>Province</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  
+  <link href="../css/index.css" rel="stylesheet" >
+  <script src="../../jquery/jquery-1.10.2.min.js"></script>
+  <script src="http://www.lk.cn/themes/simplicity/js/json/cache_address2020_02_021523.js"></script>
+  
+</head>
+<body>
+
+<!-- 省市区街道四级联动 -->
+<div class="drawer provinces" id="province" style="display: block;" >
+  <%
+  if(data.isMask) {
+  %>
+  <div class="drawer_mask"></div>
+  <%
+  }
+  %>
+  <div class="drawer_out">
+    <!--<div class="drawer_cont">-->
+    <div class="dw_head dw_m92">
+      <%
+      if(data.isCancel) {
+      %>
+      <div class="fl">
+        <a href="javascript:;" class="cancel  <%=data.cancelBtn+'-'+data.hash%>"><%=data.cancelTxt%></a>
+      </div>
+      <%
+      }
+      if(data.isSure) {
+      %>
+      <div class="fr">
+        <a href="javascript:;" class="confirm  <%=data.sureBtn+'-'+data.hash%>"><%=data.sureTxt%></a>
+      </div>
+      <%
+      }
+      %>
+      <div class="dw_h_name"><%=data.title%></div>
+    </div>
+    <div class="dw_body dw_m92">
+      <!-- 选项卡 -->
+      <div class="tab_head">
+        <ul class="tab_list">
+          <!-- 省 -->
+          <%
+          if(data.provinceName) {
+          %>
+          <li attr_sort="province" attr_id="provinceID" ><%=data.provinceName%></li>
+          <%
+          } else {
+          %>
+          <li attr_sort="province" attr_id="provinceID">请选择</li>
+          <% } %>
+          <!-- 市 -->
+          <%
+          if(data.cityName) {
+          %>
+          <li attr_sort="city" attr_id="cityID"><%=data.cityName%></li>
+          <%
+          } else {
+          %>
+          <li attr_sort="city" attr_id="cityID">请选择</li>
+          <% } %>
+          <!-- 区 -->
+          <%
+          if(data.areaName) {
+          %>
+          <li attr_sort="area" attr_id="areaID"><%=data.areaName%></li>
+          <%
+          } else {
+          %>
+          <li attr_sort="area" attr_id="areaID">请选择</li>
+          <% } %>
+          <!-- 街道 -->
+          <%
+          if(data.streetName) {
+          %>
+          <li attr_sort="street" attr_id="id"><%=data.streetName%></li>
+          <%
+          } else {
+          %>
+          <li attr_sort="street" attr_id="id">请选择</li>
+          <% } %>
+          <!-- 社区 -->
+          <%
+          if(data.villageName) {
+          %>
+          <li attr_sort="village" attr_id="id"><%=data.villageName%></li>
+          <%
+          } else {
+          %>
+          <li attr_sort="village" attr_id="id">请选择</li>
+          <% } %>
+          <!-- 小区 -->
+          <%
+          if(data.communityName) {
+          %>
+          <li attr_sort="community" attr_id="id"><%=data.communityName%></li>
+          <%
+          } else {
+          %>
+          <li attr_sort="community" attr_id="id">请选择</li>
+          <% } %>
+          <div class="line"></div>
+        </ul>
+      </div>
+      <!-- 列表 -->
+      <div class="tab_body">
+        <!-- 省 -->
+        <ul class="city_list list_bt province_l" >
+          <%
+          var i = 0, province_d = data.data.province;
+          if(!province_d) {
+          %>
+          <li class="">
+            <div class="no_data"><%=data.noData%></div>
+          </li>
+          <% } else { %>
+          <%
+          var provinceAll = data.checkAll["province"];
+          if(provinceAll) {
+          %>
+          <li attr_sort="province" attr_id="<%=provinceAll.id%>" attr_name="<%=provinceAll.name%>">
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=provinceAll.id%>">
+                <%=provinceAll.name%>
+              </div>
+            </div>
+          </li>
+          <% } %>
+          <%
+          for(i in province_d){
+          var province = province_d[i];
+          %>
+          <%
+          if(province.name == data.provinceName) {
+          %>
+            <li class="cur" attr_sort="province" attr_id="<%=province.provinceID%>" attr_name="<%=province.name%>">
+          <% } else { %>
+            <li attr_sort="province" attr_id="<%=province.provinceID%>" attr_name="<%=province.name%>">
+          <% } %>
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=province.provinceID%>">
+                <%=province.name%>
+              </div>
+            </div>
+          </li>
+          <% } } %>
+        </ul>
+        <!-- 市 -->
+        <ul class="city_list list_bt city_l" style="display: none" >
+          <%
+          var j = 0;
+          if(!data.data.city) {
+          %>
+          <li class="">
+            <div class="no_data"><%=data.noData%></div>
+          </li>
+          <% } else { %>
+          <%
+          var city_d = data.data.city[data.provinceId];
+          var cityAll = data.checkAll["city"];
+          if(cityAll) {
+          %>
+          <li attr_sort="city" attr_id="<%=cityAll.id%>" attr_name="<%=cityAll.name%>">
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=cityAll.id%>">
+                <%=cityAll.name%>
+              </div>
+            </div>
+          </li>
+          <% } %>
+          <%
+          for(j in city_d){
+          var city = city_d[j];
+          %>
+          <%
+          if(city.name == data.cityName) {
+          %>
+          <li class="cur" attr_sort="city" attr_id="<%=city.cityID%>" attr_name="<%=city.name%>">
+            <% } else { %>
+          <li attr_sort="city" attr_id="<%=city.cityID%>" attr_name="<%=city.name%>">
+            <% } %>
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=city.cityID%>">
+                <%=city.name%>
+              </div>
+            </div>
+          </li>
+          <% } } %>
+        </ul>
+        <!-- 区 -->
+        <ul class="city_list list_bt area_l" style="display: none">
+          <%
+          var k = 0;
+          if(!data.data.area) {
+          %>
+          <li class="">
+            <div class="no_data"><%=data.noData%></div>
+          </li>
+          <% } else { %>
+          <%
+          var area_d = data.data.area[data.cityId];
+          var areaAll = data.checkAll["area"];
+          if(areaAll) {
+          %>
+          <li attr_sort="area" attr_id="<%=areaAll.id%>" attr_name="<%=areaAll.name%>">
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=areaAll.id%>">
+                <%=areaAll.name%>
+              </div>
+            </div>
+          </li>
+          <% } %>
+          <%
+          for(k in area_d){
+          var area = area_d[k];
+          %>
+          <%
+          if(area.name == data.areaName) {
+          %>
+          <li class="cur" attr_sort="area" attr_id="<%=area.areaID%>" attr_name="<%=area.name%>">
+            <% } else { %>
+          <li attr_sort="area" attr_id="<%=area.areaID%>" attr_name="<%=area.name%>">
+            <% } %>
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=area.areaID%>">
+                <%=area.name%>
+              </div>
+            </div>
+          </li>
+          <% } } %>
+        </ul>
+        <!-- 街道 -->
+        <ul class="city_list list_bt street_l"  style="display: none" >
+          <%
+          var i = 0;
+          if(!data.data.street) {
+          %>
+          <li class="">
+            <div class="no_data"><%=data.noData%></div>
+          </li>
+          <% } else { %>
+          <%
+          var street_d = data.data.street[data.areaId];
+          var streetAll = data.checkAll["street"];
+          if(streetAll) {
+          %>
+          <li attr_sort="street" attr_id="<%=streetAll.id%>" attr_name="<%=streetAll.name%>">
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=streetAll.id%>">
+                <%=streetAll.name%>
+              </div>
+            </div>
+          </li>
+          <% } %>
+          <%
+          for(i in street_d){
+          var street = street_d[i];
+          %>
+          <%
+          if(street.name == data.streetName) {
+          %>
+          <li class="cur" attr_sort="street" attr_id="<%=street.id%>" attr_name="<%=street.name%>">
+            <% } else { %>
+          <li attr_sort="street" attr_id="<%=street.id%>" attr_name="<%=street.name%>">
+            <% } %>
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=street.id%>">
+                <%=street.name%>
+              </div>
+            </div>
+          </li>
+          <% } } %>
+        </ul>
+        <!-- 社区 -->
+        <ul class="city_list list_bt village_l"  style="display: none" >
+          <%
+          var i = 0;
+          if(!data.data.village) {
+          %>
+          <li class="">
+            <div class="no_data"><%=data.noData%></div>
+          </li>
+          <% } else { %>
+          <%
+          var village_d = data.data.village[data.streetId];
+          var villageAll = data.checkAll["village"];
+          if(villageAll) {
+          %>
+          <li attr_sort="village" attr_id="<%=villageAll.id%>" attr_name="<%=villageAll.name%>">
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=villageAll.id%>">
+                <%=villageAll.name%>
+              </div>
+            </div>
+          </li>
+          <% } %>
+          <%
+          for(i in village_d){
+          var village = village_d[i];
+          %>
+          <%
+          if(village.name == data.villageName) {
+          %>
+          <li class="cur" attr_sort="village" attr_id="<%=village.id%>" attr_name="<%=village.name%>">
+            <% } else { %>
+          <li attr_sort="village" attr_id="<%=village.id%>" attr_name="<%=village.name%>">
+            <% } %>
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=village.id%>">
+                <%=village.name%>
+              </div>
+            </div>
+          </li>
+          <% } } %>
+        </ul>
+        <!-- 小区 -->
+        <ul class="city_list list_bt community_l"  style="display: none" >
+          <%
+          var i = 0;
+          if(!data.data.community) {
+          %>
+          <li class="">
+            <div class="no_data"><%=data.noData%></div>
+          </li>
+          <% } else { %>
+          <%
+          var community_d = data.data.community[data.villageId];
+          var communityAll = data.checkAll["community"];
+          if(communityAll) {
+          %>
+          <li attr_sort="community" attr_id="<%=communityAll.id%>" attr_name="<%=communityAll.name%>">
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=communityAll.id%>">
+                <%=communityAll.name%>
+              </div>
+            </div>
+          </li>
+          <% } %>
+          <%
+          for(i in community_d){
+          var community = community_d[i];
+          %>
+          <%
+          if(community.name == data.communityName) {
+          %>
+          <li class="cur" attr_sort="community" attr_id="<%=community.id%>" attr_name="<%=community.name%>">
+            <% } else { %>
+          <li attr_sort="community" attr_id="<%=community.id%>" attr_name="<%=community.name%>">
+            <% } %>
+            <div class="c_list_tit">
+              <span class="iconfont iconiconfontxuanzhong4 s_select"></span>
+              <div attr_id="<%=community.id%>">
+                <%=community.name%>
+              </div>
+            </div>
+          </li>
+          <% } } %>
+        </ul>
+        <!-- end -->
+      </div>
+      <!-- end -->
+    </div>
+    <!--</div>-->
+  </div>
+</div>
+
+<script>
+  $(".tab_list li").click(function () {
+  	// console.log($(this).width());
+    // console.log($(".line").width());
+		
+    var li_marginLeft = ($(this).width()-$(".line").width())/2;
+		
+  	var _left = $(this).position().left;
+  	
+	var aa = parseFloat($(this).css('margin-left'));
+	
+		console.log(_left);
+		console.log(li_marginLeft);
+		console.log("aa", aa);
+		console.log(_left + aa + li_marginLeft);
+		
+    $(".line").animate({
+			left: _left + aa + li_marginLeft
+		}, 500)
+	});
+  
+  $(".tab_head").scrollTo(100, 0);
+</script>
+
+</body>
+</html>

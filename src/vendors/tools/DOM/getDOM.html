@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+  <title>海关</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+<style>
+  body{ margin:0; padding:0;}
+  ul,li{ margin:0; padding:0; list-style:none;}
+  .box{ width:400px; margin:0 auto;}
+  .box ul{ height:40px;}
+  .box ul li{ float:left; width:100px; color:#666; text-align:center; line-height:40px;}
+  .box ul li.now{ color:#F60; border-bottom:solid 2px #FF6600;}
+  
+  .list{ margin-top:20px}
+  .list div{ color:#666;width: 400px;text-align: center;}
+  .list div.text{  display:none;}
+</style>
+</head>
+<body>
+
+<div class="box" id="box">
+  <ul id="tab">
+    <li>jauery</li>
+    <li>html</li>
+    <li>css</li>
+    <li>ajax</li>
+  </ul>
+  <div class="list" id="list">
+    <div class="text" style="display:block;">jauery<a href="#" >下一步</a></div>
+    <div class="text">html<a href="#" >下一步</a></div>
+    <div class="text">css<a href="#" >下一步</a></div>
+    <div class="text">
+      ajax<a href="#" >下一步</a>
+      <div class="box" id="box">
+        <ul id="tab1">
+          <li>jauery</li>
+          
+          <li>html</li>
+          <li>css</li>
+          <li>ajax</li>
+        </ul>
+        <div class="list list1" id="list" name="aa">
+          <div class="text" style="display:block;">jauery<a href="#" >下一步</a></div>
+          <div class="text">html<a href="#" >下一步</a></div>
+          <div class="text">css<a href="#" >下一步</a></div>
+          <div class="text">
+            ajax<a href="#" >下一步</a>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="getDOM.js" ></script>
+
+</body>
+</html>
